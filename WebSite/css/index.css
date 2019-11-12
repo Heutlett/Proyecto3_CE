@@ -1,6 +1,7 @@
-div {
-    width: 90%;
-    height: 100%;
-    background-color: aqua;
-    margin: 5%;
+
+/* _________________________ En este lugar se coloca el grafo ______________*/
+.container {
+    max-width: 400px;
+    height: 400px;
+    margin: auto;
 }
