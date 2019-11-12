@@ -1,7 +1,46 @@
+*{
+    margin: 0;
+    padding: 0;
+}
 
-/* _________________________ En este lugar se coloca el grafo ______________*/
+/* ___Ajuste del body_______________*/
+body{
+    background-color: #00f;
+    padding: 20px;
+
+}
+
+
+/* ___Ajuste del body_______________*/
+main{
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+
+}
+
+
+/* _________________________ En este lugar se la imagen del grafo ______________*/
 .container {
-    max-width: 400px;
+    background: #eee;
+    width: 400px;
     height: 400px;
-    margin: auto;
+    display: inline-block;
+    margin: 20px;
+    text-align: left;
+    border: solid #00f 2px;
+    border-radius: 10px;
+}
+
+
+/* _________________________ En este lugar se coloca la info del grafo ______________*/
+.info {
+    background: #aaa;
+    width: 400px;
+    height: 400px;
+    display: inline-block;
+    border: solid #00f 2px;
+    border-radius: 10px;
+    margin: 20px;
 }
