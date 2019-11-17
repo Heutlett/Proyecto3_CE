@@ -125,3 +125,41 @@ process = 12440@LAPTOP-KAFML7NV
 [11/4/19 23:03:08:182 CST] 00000069 com.ibm.ws.session.WASSessionCore                            I SESN0176I: A new session context will be created for application key default_host/ProjectGraphAPI
 [11/4/19 23:03:08:182 CST] 00000069 com.ibm.ws.util                                              I SESN0172I: The session manager is using the Java default SecureRandom implementation for session ID generation.
 [11/4/19 23:03:08:182 CST] 00000082 com.ibm.ws.webcontainer.osgi.mbeans.PluginGenerator          I SRVE9103I: A configuration file for a web server plugin was automatically generated for this server at C:\Users\carlo\OneDrive\Escritorio\TEC 2019\Material de cursos\Datos 1\Proyectos\Proyecto 3\Proyecto3_CE\Server\usr\servers\defaultServer\logs\state\plugin-cfg.xml.
+[11/8/19 21:24:52:315 CST] 000015c4 com.ibm.ws.http.internal.VirtualHostImpl                     A CWWKT0017I: Web application removed (default_host): http://localhost:9080/ProjectGraphAPI/
+[11/8/19 21:24:53:068 CST] 000015c4 com.ibm.ws.app.manager.AppMessageHelper                      A CWWKZ0009I: The application ProjectGraphAPI has stopped successfully.
+[11/8/19 21:24:53:198 CST] 000015c4 com.ibm.ws.app.manager.AppMessageHelper                      I CWWKZ0018I: Starting application ProjectGraphAPI.
+[11/8/19 21:24:53:199 CST] 000015c4 bm.ws.app.manager.war.internal.WARDeployedAppInfoFactoryImpl I CWWKZ0134I: The ProjectGraphAPI application is using the loose application definition at the C:\Users\carlo\OneDrive\Escritorio\TEC 2019\Material de cursos\Datos 1\Proyectos\Proyecto 3\Proyecto3_CE\Server\usr\servers\defaultServer\apps\ProjectGraphAPI.war.xml location.
+[11/8/19 21:24:53:861 CST] 000015b8 com.ibm.ws.webcontainer.osgi.mbeans.PluginGenerator          I SRVE9103I: A configuration file for a web server plugin was automatically generated for this server at C:\Users\carlo\OneDrive\Escritorio\TEC 2019\Material de cursos\Datos 1\Proyectos\Proyecto 3\Proyecto3_CE\Server\usr\servers\defaultServer\logs\state\plugin-cfg.xml.
+[11/8/19 21:24:54:562 CST] 000015c4 com.ibm.ws.webcontainer.osgi.webapp.WebGroup                 I SRVE0169I: Loading Web Module: ProjectGraphAPI.
+[11/8/19 21:24:54:563 CST] 000015c4 com.ibm.ws.webcontainer                                      I SRVE0250I: Web Module ProjectGraphAPI has been bound to default_host.
+[11/8/19 21:24:54:573 CST] 000015c4 com.ibm.ws.http.internal.VirtualHostImpl                     A CWWKT0016I: Web application available (default_host): http://localhost:9080/ProjectGraphAPI/
+[11/8/19 21:24:54:576 CST] 000015c4 com.ibm.ws.app.manager.AppMessageHelper                      A CWWKZ0003I: The application ProjectGraphAPI updated in 1.378 seconds.
+[11/8/19 21:24:54:660 CST] 0000156d com.ibm.ws.webcontainer.osgi.mbeans.PluginGenerator          I SRVE9103I: A configuration file for a web server plugin was automatically generated for this server at C:\Users\carlo\OneDrive\Escritorio\TEC 2019\Material de cursos\Datos 1\Proyectos\Proyecto 3\Proyecto3_CE\Server\usr\servers\defaultServer\logs\state\plugin-cfg.xml.
+[11/8/19 21:24:54:688 CST] 000015c8 com.ibm.ws.session.WASSessionCore                            I SESN0176I: A new session context will be created for application key default_host/ProjectGraphAPI
+[11/8/19 21:24:54:710 CST] 000015c8 com.ibm.ws.util                                              I SESN0172I: The session manager is using the Java default SecureRandom implementation for session ID generation.
+[11/8/19 21:24:58:227 CST] 000015f7 com.ibm.ws.runtime.update.internal.RuntimeUpdateManagerImpl  A CWWKE1100I: Waiting for up to 30 seconds for the server to quiesce.
+[11/8/19 21:24:59:432 CST] 000011de com.ibm.ws.tcpchannel.internal.TCPChannel                    I CWWKO0220I: TCP Channel defaultHttpEndpoint has stopped listening for requests on host 127.0.0.1  (IPv4: 127.0.0.1) port 9080.
+[11/8/19 21:24:59:506 CST] 0000156d com.ibm.ws.tcpchannel.internal.TCPChannel                    I CWWKO0220I: TCP Channel defaultHttpEndpoint-ssl has stopped listening for requests on host 127.0.0.1  (IPv4: 127.0.0.1) port 9443.
+[11/8/19 21:24:59:507 CST] 0000156d com.ibm.ws.http.internal.VirtualHostImpl                     A CWWKT0017I: Web application removed (default_host): https://localhost:9443/ProjectGraphAPI/
+[11/8/19 21:24:59:508 CST] 0000156d com.ibm.ws.tcpchannel.internal.TCPChannel                    I CWWKO0220I: TCP Channel wasJmsEndpoint351 has stopped listening for requests on host 127.0.0.1  (IPv4: 127.0.0.1) port 7276.
+[11/8/19 21:24:59:551 CST] 0000156d com.ibm.ws.tcpchannel.internal.TCPChannel                    I CWWKO0220I: TCP Channel wasJmsEndpoint351-ssl has stopped listening for requests on host 127.0.0.1  (IPv4: 127.0.0.1) port 7286.
+[11/8/19 21:24:59:696 CST] 000015f7 .jbatch.container.services.impl.MemoryPersistenceManagerImpl I CWWKY0005I: The batch In-Memory persistence service is activated.
+[11/8/19 21:24:59:698 CST] 000015f7 com.ibm.jbatch.container.impl.BatchKernelImpl                I CWWKY0008I: The batch feature is using persistence type In-Memory.
+[11/8/19 21:25:00:551 CST] 000015f7 com.ibm.ws.runtime.update.internal.RuntimeUpdateManagerImpl  I CWWKE1101I: Server quiesce complete.
+[11/8/19 21:25:00:768 CST] 000015c4 com.ibm.ws.app.manager.AppMessageHelper                      A CWWKZ0009I: The application ProjectGraphAPI has stopped successfully.
+[11/8/19 21:25:01:087 CST] 000015f7 .jbatch.container.services.impl.MemoryPersistenceManagerImpl I CWWKY0005I: The batch In-Memory persistence service is deactivated.
+[11/8/19 21:25:02:172 CST] 000015f9 org.apache.yoko.orb.OCI.Transport                            I shutdown: iiop transport using socket Socket[addr=/127.0.0.1,port=54087,localport=2809]
+[11/8/19 21:25:02:722 CST] 000015f9 org.apache.yoko.orb.OCI.Transport                            I shutdown: iiop transport using socket 75d50862[SSL_NULL_WITH_NULL_NULL: Socket[addr=/127.0.0.1,port=54088,localport=9402]]
+[11/8/19 21:25:02:745 CST] 000015f7 com.ibm.ws.transport.iiop.internal.ORBWrapperInternal        A CWWKI0002I: The CORBA name server is no longer available at corbaloc:iiop:localhost:2809/NameService.
+[11/8/19 21:25:10:380 CST] 000015f7 com.ibm.ws.sib.utils.ras.SibMessage                          I  CWSIS1589I: The file store has stopped successfully.
+[11/8/19 21:25:10:833 CST] 000015f7 com.ibm.ws.sib.utils.ras.SibMessage                          I  CWSID0121I: JMS server stopped.  
+[11/8/19 21:25:21:565 CST] 000015f7 com.ibm.ws.security.ready.internal.SecurityReadyServiceImpl  I CWWKS0009I: The security service has stopped.
+[11/8/19 21:25:22:539 CST] 000015f7 ibm.ws.security.authentication.internal.jaas.JAASServiceImpl I CWWKS1124I: The collective authentication plugin with class name NullCollectiveAuthenticationPlugin has been deactivated. 
+[11/8/19 21:25:23:352 CST] 000015f7 org.apache.cxf.bus.osgi.CXFActivator                         I Removing the extensions for bundle 197
+[11/8/19 21:25:23:353 CST] 000015f7 org.apache.cxf.bus.osgi.CXFActivator                         I Removing the extensions for bundle 199
+[11/8/19 21:25:23:353 CST] 000015f7 org.apache.cxf.bus.osgi.CXFActivator                         I Removing the extensions for bundle 201
+[11/8/19 21:25:23:353 CST] 000015f7 org.apache.cxf.bus.osgi.CXFActivator                         I Removing the extensions for bundle 205
+[11/8/19 21:25:23:353 CST] 000015f7 org.apache.cxf.bus.osgi.CXFActivator                         I Removing the extensions for bundle 207
+[11/8/19 21:25:23:353 CST] 000015f7 org.apache.cxf.bus.osgi.CXFActivator                         I Removing the extensions for bundle 188
+[11/8/19 21:25:23:353 CST] 000015f7 org.apache.cxf.bus.osgi.CXFActivator                         I Removing the extensions for bundle 191
+[11/8/19 21:25:34:699 CST] 00000001 com.ibm.ws.kernel.launch.internal.FrameworkManager           A CWWKE0036I: The server defaultServer stopped after 3 days, 22 hours, 29 minutes, 26.875 seconds.
