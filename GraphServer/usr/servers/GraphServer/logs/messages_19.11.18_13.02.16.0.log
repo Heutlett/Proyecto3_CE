@@ -1,0 +1,51 @@
+********************************************************************************
+product = WebSphere Application Server 19.0.0.11 (wlp-1.0.34.cl191120191031-0300)
+wlp.install.dir = C:/Users/carlo/OneDrive/Escritorio/TEC 2019/Material de cursos/Datos 1/Proyectos/Proyecto 3 nuevo/GraphServer/
+java.home = C:\Program Files\Java\jre1.8.0_111
+java.version = 1.8.0_111
+java.runtime = Java(TM) SE Runtime Environment (1.8.0_111-b14)
+os = Windows 10 (10.0; amd64) (en_US)
+process = 4660@LAPTOP-KAFML7NV
+********************************************************************************
+[11/18/19 12:32:25:060 CST] 00000001 com.ibm.ws.kernel.launch.internal.FrameworkManager           A CWWKE0001I: The server GraphServer has been launched.
+[11/18/19 12:32:25:081 CST] 00000001 com.ibm.ws.kernel.launch.internal.FrameworkManager           A CWWKE0100I: This product is licensed for development, and limited production use. The full license terms can be viewed here: https://public.dhe.ibm.com/ibmdl/export/pub/software/websphere/wasdev/license/base_ilan/ilan/19.0.0.11/lafiles/en.html
+[11/18/19 12:32:26:245 CST] 00000001 com.ibm.ws.kernel.launch.internal.FrameworkManager           I CWWKE0002I: The kernel started after 1.4 seconds
+[11/18/19 12:32:26:379 CST] 00000020 com.ibm.ws.kernel.feature.internal.FeatureManager            I CWWKF0007I: Feature update started.
+[11/18/19 12:32:27:228 CST] 00000018 com.ibm.ws.app.manager.internal.monitor.DropinMonitor        A CWWKZ0058I: Monitoring dropins for applications.
+[11/18/19 12:32:27:351 CST] 00000016 com.ibm.ws.annocache.service                                 I OSGi Work Path [ C:\Users\carlo\OneDrive\Escritorio\TEC 2019\Material de cursos\Datos 1\Proyectos\Proyecto 3 nuevo\GraphServer\usr\servers\GraphServer\workarea\org.eclipse.osgi\42\data ]
+[11/18/19 12:32:27:469 CST] 00000015 g.apache.cxf.cxf.core.3.2:1.0.34.cl191120191031-0300(id=87)] I Aries Blueprint packages not available. So namespaces will not be registered
+[11/18/19 12:32:27:517 CST] 00000026 com.ibm.ws.tcpchannel.internal.TCPChannel                    I CWWKO0219I: TCP Channel defaultHttpEndpoint has been started and is now listening for requests on host 127.0.0.1  (IPv4: 127.0.0.1) port 9080.
+[11/18/19 12:32:27:703 CST] 0000002b com.ibm.ws.app.manager.AppMessageHelper                      I CWWKZ0018I: Starting application Proyecto3.
+[11/18/19 12:32:27:704 CST] 0000002b bm.ws.app.manager.war.internal.WARDeployedAppInfoFactoryImpl I CWWKZ0134I: The Proyecto3 application is using the loose application definition at the C:\Users\carlo\OneDrive\Escritorio\TEC 2019\Material de cursos\Datos 1\Proyectos\Proyecto 3 nuevo\GraphServer\usr\servers\GraphServer\apps\Proyecto3.war.xml location.
+[11/18/19 12:32:28:122 CST] 0000002b com.ibm.ws.session.WASSessionCore                            I SESN8501I: The session manager did not find a persistent storage location; HttpSession objects will be stored in the local application server's memory.
+[11/18/19 12:32:28:134 CST] 0000002b com.ibm.ws.webcontainer.osgi.webapp.WebGroup                 I SRVE0169I: Loading Web Module: Proyecto3.
+[11/18/19 12:32:28:136 CST] 0000002b com.ibm.ws.webcontainer                                      I SRVE0250I: Web Module Proyecto3 has been bound to default_host.
+[11/18/19 12:32:28:137 CST] 0000002b com.ibm.ws.http.internal.VirtualHostImpl                     A CWWKT0016I: Web application available (default_host): http://localhost:9080/Proyecto3/
+[11/18/19 12:32:28:142 CST] 0000002b com.ibm.ws.app.manager.AppMessageHelper                      A CWWKZ0001I: Application Proyecto3 started in 0.440 seconds.
+[11/18/19 12:32:28:237 CST] 0000002f com.ibm.ws.session.WASSessionCore                            I SESN0176I: A new session context will be created for application key default_host/Proyecto3
+[11/18/19 12:32:28:269 CST] 0000002f com.ibm.ws.util                                              I SESN0172I: The session manager is using the Java default SecureRandom implementation for session ID generation.
+[11/18/19 12:32:28:367 CST] 00000020 com.ibm.ws.kernel.feature.internal.FeatureManager            A CWWKF0012I: The server installed the following features: [jaxrs-2.1, jaxrsClient-2.1, jsonp-1.1, localConnector-1.0, servlet-4.0].
+[11/18/19 12:32:28:367 CST] 00000020 com.ibm.ws.kernel.feature.internal.FeatureManager            I CWWKF0008I: Feature update completed in 2.130 seconds.
+[11/18/19 12:32:28:368 CST] 00000020 com.ibm.ws.kernel.feature.internal.FeatureManager            A CWWKF0011I: The GraphServer server is ready to run a smarter planet. The GraphServer server started in 3.524 seconds.
+[11/18/19 12:32:28:635 CST] 00000030 com.ibm.ws.webcontainer.osgi.mbeans.PluginGenerator          I SRVE9103I: A configuration file for a web server plugin was automatically generated for this server at C:\Users\carlo\OneDrive\Escritorio\TEC 2019\Material de cursos\Datos 1\Proyectos\Proyecto 3 nuevo\GraphServer\usr\servers\GraphServer\logs\state\plugin-cfg.xml.
+[11/18/19 12:33:14:895 CST] 00000035 g.apache.cxf.cxf.core.3.2:1.0.34.cl191120191031-0300(id=87)] I Setting the server's publish address to be /
+[11/18/19 12:33:14:966 CST] 00000035 com.ibm.ws.webcontainer.servlet                              I SRVE0242I: [Proyecto3] [/Proyecto3] [cr.ac.tec.graph.api.resources.RESTApplication]: Initialization successful.
+[11/18/19 12:39:28:056 CST] 00000035 com.ibm.ws.http.internal.VirtualHostImpl                     A CWWKT0017I: Web application removed (default_host): http://localhost:9080/Proyecto3/
+[11/18/19 12:39:28:058 CST] 00000035 com.ibm.ws.webcontainer.servlet                              I SRVE0253I: [Proyecto3] [/Proyecto3] [cr.ac.tec.graph.api.resources.RESTApplication]: Destroy successful.
+[11/18/19 12:39:28:063 CST] 00000035 com.ibm.ws.app.manager.AppMessageHelper                      A CWWKZ0009I: The application Proyecto3 has stopped successfully.
+[11/18/19 12:39:28:063 CST] 00000035 com.ibm.ws.app.manager.AppMessageHelper                      I CWWKZ0018I: Starting application Proyecto3.
+[11/18/19 12:39:28:063 CST] 00000035 bm.ws.app.manager.war.internal.WARDeployedAppInfoFactoryImpl I CWWKZ0134I: The Proyecto3 application is using the loose application definition at the C:\Users\carlo\OneDrive\Escritorio\TEC 2019\Material de cursos\Datos 1\Proyectos\Proyecto 3 nuevo\GraphServer\usr\servers\GraphServer\apps\Proyecto3.war.xml location.
+[11/18/19 12:39:28:095 CST] 00000025 com.ibm.ws.webcontainer.osgi.mbeans.PluginGenerator          I SRVE9103I: A configuration file for a web server plugin was automatically generated for this server at C:\Users\carlo\OneDrive\Escritorio\TEC 2019\Material de cursos\Datos 1\Proyectos\Proyecto 3 nuevo\GraphServer\usr\servers\GraphServer\logs\state\plugin-cfg.xml.
+[11/18/19 12:39:28:157 CST] 00000035 com.ibm.ws.webcontainer.osgi.webapp.WebGroup                 I SRVE0169I: Loading Web Module: Proyecto3.
+[11/18/19 12:39:28:157 CST] 00000035 com.ibm.ws.webcontainer                                      I SRVE0250I: Web Module Proyecto3 has been bound to default_host.
+[11/18/19 12:39:28:157 CST] 00000035 com.ibm.ws.http.internal.VirtualHostImpl                     A CWWKT0016I: Web application available (default_host): http://localhost:9080/Proyecto3/
+[11/18/19 12:39:28:157 CST] 00000035 com.ibm.ws.app.manager.AppMessageHelper                      A CWWKZ0003I: The application Proyecto3 updated in 0.094 seconds.
+[11/18/19 12:39:28:173 CST] 0000002d com.ibm.ws.session.WASSessionCore                            I SESN0176I: A new session context will be created for application key default_host/Proyecto3
+[11/18/19 12:39:28:173 CST] 0000002d com.ibm.ws.util                                              I SESN0172I: The session manager is using the Java default SecureRandom implementation for session ID generation.
+[11/18/19 12:39:28:188 CST] 00000034 com.ibm.ws.webcontainer.osgi.mbeans.PluginGenerator          I SRVE9103I: A configuration file for a web server plugin was automatically generated for this server at C:\Users\carlo\OneDrive\Escritorio\TEC 2019\Material de cursos\Datos 1\Proyectos\Proyecto 3 nuevo\GraphServer\usr\servers\GraphServer\logs\state\plugin-cfg.xml.
+[11/18/19 12:43:12:057 CST] 0000006c com.ibm.ws.runtime.update.internal.RuntimeUpdateManagerImpl  A CWWKE1100I: Waiting for up to 30 seconds for the server to quiesce.
+[11/18/19 12:43:12:202 CST] 00000053 com.ibm.ws.tcpchannel.internal.TCPChannel                    I CWWKO0220I: TCP Channel defaultHttpEndpoint has stopped listening for requests on host 127.0.0.1  (IPv4: 127.0.0.1) port 9080.
+[11/18/19 12:43:12:202 CST] 00000053 com.ibm.ws.http.internal.VirtualHostImpl                     A CWWKT0017I: Web application removed (default_host): http://localhost:9080/Proyecto3/
+[11/18/19 12:43:13:209 CST] 0000006c com.ibm.ws.runtime.update.internal.RuntimeUpdateManagerImpl  I CWWKE1101I: Server quiesce complete.
+[11/18/19 12:43:13:235 CST] 0000003a com.ibm.ws.app.manager.AppMessageHelper                      A CWWKZ0009I: The application Proyecto3 has stopped successfully.
+[11/18/19 12:43:13:673 CST] 00000001 com.ibm.ws.kernel.launch.internal.FrameworkManager           A CWWKE0036I: The server GraphServer stopped after 10 minutes, 48.845 seconds.

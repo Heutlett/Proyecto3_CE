@@ -1,0 +1,20 @@
+#Thu Oct 31 06:05:47 GMT 2019
+dev/api/ibm/com.ibm.websphere.appserver.api.servlet_1.1.34.jar=9cba22b90673906a8254f38c5eeab8de
+lib/com.ibm.ws.org.apache.commons.io_1.0.34.jar=2a414bfc10a6edaa16f15c7a60731ac9
+lib/com.ibm.ws.org.apache.commons.fileupload_1.0.34.jar=a94c7375d8fea9ab597520fc7527cf78
+lib/com.ibm.ws.webserver.plugin.runtime_1.0.34.jar=f41f08b5de8c2adfc7739be064e5b0da
+lib/com.ibm.ws.webcontainer.servlet.3.1_1.0.34.jar=38cd79d27e9f60c6ee3fb70a012b2543
+lib/com.ibm.ws.webserver.plugin.runtime.interfaces_1.0.34.jar=174ec51c3336a53142a51aa1248340ed
+lib/com.ibm.ws.session_1.0.34.jar=de788775deb3e01baa072b20ad8eff81
+lib/com.ibm.websphere.security_1.1.34.jar=594f3de30fd2f7cc61e0782b7df362b0
+lib/features/com.ibm.websphere.appserver.servlet-4.0.mf=3a1f233f53c958e4492af1484dea031c
+lib/com.ibm.ws.managedobject_1.0.34.jar=5b7370ebd92f918276efe723cb140101
+lib/com.ibm.ws.webcontainer.servlet.4.0.factories_1.0.34.jar=ddac7cb0464543945799bb1cff9bbec4
+lib/com.ibm.ws.webcontainer.servlet.4.0_1.0.34.jar=8ec172ae2fde7fa0e6116198efe94648
+lib/com.ibm.ws.http.plugin.merge_1.0.34.jar=314bd834a9ae15089d3e45ddb8aa09c5
+dev/api/ibm/javadoc/com.ibm.websphere.appserver.api.servlet_1.1-javadoc.zip=987cda6879a578099d1d387443144cfb
+lib/com.ibm.ws.webcontainer.cors_1.0.34.jar=5ac8c7857c4439b6064d76feda35a6fe
+bin/tools/ws-webserverPluginutil.jar=ecf586329c15831a532f41a3cdcb8667
+lib/com.ibm.ws.webcontainer_1.1.34.jar=2d2bf9119602b1f59e17ba08efcd3536
+lib/com.ibm.ws.webserver.plugin.utility_1.0.34.jar=d0a850830ad5da971bb70b874f76d269
+lib/com.ibm.ws.app.manager.war_1.0.34.jar=6d03ad6a0a3160f8a6dea442a32c9938

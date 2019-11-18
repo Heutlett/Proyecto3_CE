@@ -1,0 +1,27 @@
+#Thu Oct 31 06:05:46 GMT 2019
+lib/com.ibm.ws.threading_1.1.34.jar=73c4c2a482da6a4f00567656d7ffe185
+lib/com.ibm.ws.config.ext_1.0.34.jar=627b4a059548d10c7d01eb855b11e7ec
+lib/com.ibm.ws.org.eclipse.equinox.metatype_1.0.34.jar=361edf7da516e3ccd79d2dad06820410
+lib/org.eclipse.osgi_3.15.0.jar=fa01697f32eb45ec73b086448a884d4b
+lib/com.ibm.ws.org.apache.aries.util_1.0.34.jar=e2a59a6f955c3be589797718a74847fd
+lib/com.ibm.ws.kernel.equinox.module_1.0.34.jar=3b7cc394bda589b6a267b2fdd6f936e1
+lib/com.ibm.ws.kernel.service_1.3.34.jar=81840d59d6e1ca72a54006e9f2f1a5ae
+lib/com.ibm.ws.kernel.instrument.serialfilter.serverconfig_1.0.34.jar=5d846fe96ca9bc478b32b48067433200
+lib/com.ibm.ws.kernel.filemonitor_1.0.34.jar=91eb79034a6d2aacc2b2342eb5b17df0
+lib/com.ibm.ws.jmx_1.0.34.jar=ebed50f17d0090e37aa8cb4a597a0b09
+lib/platform/kernelCore-1.0.mf=691860280829c147dd0b783ab3771757
+lib/com.ibm.ws.org.apache.aries.jmx.core.whiteboard_1.0.34.jar=cadf9436e8ca48153fcf7df75dda0ec4
+lib/com.ibm.ws.org.apache.felix.scr_1.0.34.jar=96599e770fd1a78f3bc73b5e43d35a58
+lib/com.ibm.ws.org.eclipse.equinox.coordinator_1.0.34.jar=efd8c5655db687d6f18683b0d52c35d6
+lib/com.ibm.ws.crypto.passwordutil_1.0.34.jar=4b30fd0fe1e89317fda1fd544f72a446
+lib/com.ibm.ws.org.objectweb.asm_1.0.34.jar=d9520860d1867ff26ea714f88388a3bf
+lib/com.ibm.ws.org.apache.aries.jmx.api_1.0.34.jar=5305d2b1698d0da262cdc6344aa6bf5d
+lib/com.ibm.ws.config_1.0.34.jar=eda0f85b8abe57767671eaea6d1bb5b0
+lib/com.ibm.ws.org.eclipse.equinox.region_1.0.34.jar=1185d7a831a6be79f23fdc6733f0cad8
+lib/com.ibm.ws.diagnostics_1.0.34.jar=ca5919eb888fec848c3cd688dfd91253
+lib/com.ibm.ws.runtime.update_1.0.34.jar=4b1c118e9c9a54cae723928ea3262d2f
+lib/com.ibm.ws.kernel.feature_1.0.34.jar=4e7b73f029a3f7fc2fd975dab91bea69
+lib/com.ibm.ws.kernel.instrument.serialfilter_1.0.34.jar=34077c1128c4e03e54c7b94766528166
+lib/com.ibm.ws.kernel.metatype.helper_1.0.34.jar=e142773388190c70019fd8fe4dadd158
+lib/com.ibm.ws.org.jboss.jandex_1.0.34.jar=1e1634ba4ebdab53bc59ee37b6b484fe
+lib/com.ibm.ws.event_1.0.34.jar=b338f090a9d71c53f12a36759ef94c1b

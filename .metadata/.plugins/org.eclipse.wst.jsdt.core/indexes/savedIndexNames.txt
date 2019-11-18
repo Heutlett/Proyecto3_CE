@@ -1,0 +1,6 @@
+INDEX VERSION 1.4+C:\Users\carlo\OneDrive\Escritorio\TEC 2019\Material de cursos\Datos 1\Proyectos\Proyecto 3 nuevo\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+1565201987.index
+4221036140.index
+1652772451.index
+1960586363.index
+4217032460.index

@@ -1,0 +1,25 @@
+PH11427 SERVICE CALL BY SERVICE.CREATE() DOES NOT TIME OUT IN 30 SECONDS.
+PH15281 PH8346 PostgreSQL Large Object API blocked
+PH16611 Multiple HTTP/2 DoS Vulnerabilities affect WebSphere Application Server Liberty
+PH17678 Man in the middle vulnerability in OpenSAML (CVE-2014-3603)
+PH17796 ConfigHash value in plugin-config.xml causing parsing issues.
+PH18113 Add Apache HttpClient library
+PH18282 SCIM API fails to retrieve a group or user with a forward slash in the DN
+OLGH4387 Runnable JAR execution fails when WLP_USER_DIR env var is set to "other" location with CWWKE0005E
+OLGH7701 Pull in MyFaces 2.3.4
+OLGH8152 TAI negotiateValidateandEstablishTrust called twice during authentication.
+OLGH8196 7234-TRACENPE COMMIT1
+OLGH8404 Confidential for Security Integrity fix CVE-2014-3603
+OLGH8860 jwkRetriever should not require an sslSocketFactory if using http
+OLGH8899 federatedRegistry-1.0 group membership may use a repository that does not participate in the realm
+OLGH9122 Remove additional ; in WebApp.java
+OLGH9129 Update Commons BeanUtils to 1.9.4
+OLGH9130 Header Key retrieval fix for case sensitivity
+OLGH9132 correct certain JSP messages
+OLGH9143 NullPointerException might be thrown when the security audit is enabled for ejb.
+OLGH9380 IllegalStateException in JMX Connector RESTHandler from call to getWriter
+OLGH9416 Add Apache HttpClient v3.1 library
+OLGH9436 RACF SDBM LDAP registries may encounter OperationNotSupportedException
+OLGH9437 Test Failure (20180702-1422): com.ibm.ws.jdbc.fat.v41.JDBC41Test.testTransactionTimeoutAbort
+OLGH9451 Fix Intermittent NullPointerException on TCP trace during shutdown
+OLGH9472 H2 Intermittent NPE in HttpOutputStreamImpl.flushHeaders()
