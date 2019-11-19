@@ -1,0 +1,26 @@
+# pack-refs with: peeled fully-peeled sorted 
+66c0f9e531b143d57dd7fae89476748c05e62b0a refs/remotes/origin/deprecated-v0.1
+920e0314012848d36d2b7a3be7377403b7b88090 refs/remotes/origin/edges-vertex-shader
+1d37a07b3bb624d580b409e2aa8a6955c8e62ec3 refs/remotes/origin/forceatlas2-barneshut
+2bda956b5f89e90d4892f1b1eab2b61964b3690f refs/remotes/origin/forceatlas2-namespace
+4aa1dc814d99dbe6fbc21a50ce67d919310f31f3 refs/remotes/origin/forceatlas2-transferable
+c49589f2419ca98542fd21b82b926dea21bb9fef refs/remotes/origin/master
+7070159cf68671344054c72141973440a9f6e9e2 refs/remotes/origin/merge-pr-316
+5752fe9951195ec4828f58e69e48db8449822fe2 refs/remotes/origin/nodes-gl-points
+cacf9bd909e7ea57209a8db57f5ba7fa1fce0226 refs/remotes/origin/remove-indexes
+33e1b68230c316ef6cd6794541830448da1ed59b refs/remotes/origin/snapshot-plugin
+bf8d35e79d7b7a9373df670aa5279957496e9b09 refs/remotes/origin/svg-renderer
+a928caea3562294205bb02e163e9f4525655f17f refs/remotes/origin/v2
+23fe3a93873053b1b4fd02e2b5453f69335b2920 refs/remotes/origin/v2-antialiasing
+ee49fe09fcf58ea26143546f95f47241e7783b3c refs/remotes/origin/v2-edge-adjustment
+840e1f1e9423d02c68e37c924ab1290c2274f437 refs/remotes/origin/v2-label-grid
+3693c3be7f32162fafc978f801de20db561ff25f refs/remotes/origin/v2-overhaul-camera
+6f59ed1557292e1f65a66b464fe915b59e73f38a refs/remotes/origin/wild-optimizations
+686322efedca20a33231c743a42457401804c8e3 refs/remotes/origin/worker-force
+876138ad0dc572e6580774b2324c1bf5b09ef8ae refs/tags/v1.0.0
+8289b86e17e0caabb14122370c7242d1fea6e011 refs/tags/v1.0.1
+57874b93959851ab1f734e6c8f3d5453c2e3c02a refs/tags/v1.0.2
+52302f33b89265e92c6cccf2c90d7ea2ba314f00 refs/tags/v1.0.3
+5738398039fae43543cf6a4ceb1126be39234177 refs/tags/v1.1.0
+c45e7790b988307124a12177115d12f2f77c915b refs/tags/v1.2.0
+9c940aa9b162c7aaaf8b25d88e236cb847c1633a refs/tags/v1.2.1

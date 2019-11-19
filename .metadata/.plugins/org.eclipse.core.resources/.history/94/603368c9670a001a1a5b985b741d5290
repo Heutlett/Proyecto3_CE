@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <title>OIJ Graph</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, maximum-scale=1.0" />
+    <link rel="stylesheet" href="css/index.css">
+</head>
+
+
+<body>
+
+
+    <main>
+        <div class="container" id="container"></div>
+        <div class="info" id="info">
+
+            <h2>Tabla del grafo</h2>
+            <input type="button" id="buttonJSON" class="boton" value="Json">
+
+            <table id="mi_tabla">
+                <tbody>
+                </tbody>
+            </table>
+
+        </div>
+
+
+
+
+
+
+    </main>
+
+
+
+
+    <script src="sigma.js/build/sigma.require.js"></script>
+    <script src="sigma.js/build/plugins/sigma.parsers.json.min.js"></script>
+    <script src="js/jquery-1.7.1.js"></script>
+    <script src="js/index.js"></script>
+
+
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,73 @@
+//___________________________________ Se instancia el sigma
+var s = new sigma('container');
+
+//_____________________ Llamar al JSON que contiene el grafo
+sigma.parsers.json(
+    'datos.json', s,
+    function () {
+        s.refresh();
+    }
+);
+
+
+
+//_________________________________ Tabla
+
+$(function(){
+    var table;
+    
+    $.getJSON('datos.json',function(data){
+        table = data;
+        
+        iniciando(0);
+        
+    });
+    
+    function iniciando(){
+        $("#mi_tabla").empty();
+        
+        jQuery.each(table.nodes,function(i,row){
+            var r = "";
+            
+            $.each(row,function(index,valor){
+                
+                
+              // r = r + "<tr><td>" + valor + "</td>";
+                
+                if (index == "id"){
+                    r = r + "<tr><td>" + valor + "</td>";
+                }
+                else{
+                    r = r + "<td>" + valor + "</td>";
+                }
+            });
+            r += "</tr>";
+            
+            $("#mi_tabla").append(r);
+            
+        });
+        
+        jQuery.each(table.edges,function(i,row){
+            var r = "";
+            
+            $.each(row,function(index,valor){
+                
+                
+              // r = r + "<tr><td>" + valor + "</td>";
+                
+                if (index == "id"){
+                    r = r + "<tr><td>" + valor + "</td>";
+                }
+                else{
+                    r = r + "<td>" + valor + "</td>";
+                }
+            });
+            r += "</tr>";
+            
+            $("#mi_tabla").append(r);
+            
+        });
+        
+    }
+    
+});
