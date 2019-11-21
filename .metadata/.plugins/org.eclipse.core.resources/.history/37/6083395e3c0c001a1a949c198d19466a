@@ -1,0 +1,52 @@
+package cr.ac.tec.graph.api.dto;
+
+public class Edge {
+
+	private String id;
+	private String start;
+	private String end;
+	private int weight;
+	public static idCount = 0;
+	
+	public Edge() {
+		this.id = "";
+		this.start = "";
+		this.end = "";
+		this.weight = 0;
+	}
+	
+	public Edge(String id, String start, String end, int weight) {
+		super();
+		this.id = id;
+		this.start = start;
+		this.end = end;
+		this.weight = weight;
+	}
+	
+	public String getId() {
+		return id;
+	}
+	public void setId(String id) {
+		this.id = id;
+	}
+	public String getStart() {
+		return start;
+	}
+	public void setStart(String start) {
+		this.start = start;
+	}
+	public String getEnd() {
+		return end;
+	}
+	public void setEnd(String end) {
+		this.end = end;
+	}
+	public int getWeight() {
+		return weight;
+	}
+	public void setWeight(int weight) {
+		this.weight = weight;
+	}
+
+	
+}

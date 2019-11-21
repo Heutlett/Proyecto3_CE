@@ -6,13 +6,13 @@ public class Edge {
 	private String start;
 	private String end;
 	private int weight;
+	public static int idCount = 0;
 	
-	public Edge(String id, String start, String end, int weight) {
-		super();
-		this.id = id;
-		this.start = start;
-		this.end = end;
-		this.weight = weight;
+	public Edge() {
+		this.id = ""+idCount+1;
+		this.start = "";
+		this.end = "";
+		this.weight = 0;
 	}
 	
 	public String getId() {

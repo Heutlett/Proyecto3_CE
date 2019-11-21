@@ -9,10 +9,13 @@ public class Graph {
 	private String id;
     private ArrayList<Node> nodes;
     private ArrayList<Edge> edges;
+    public static int idCount = 0;
     
     public Graph() {
+    	this.id = ""+(idCount+1);
     	this.nodes = new ArrayList<>();
         this.edges = new ArrayList<>();
+        idCount++;
     }
     
     public Graph(String id) {

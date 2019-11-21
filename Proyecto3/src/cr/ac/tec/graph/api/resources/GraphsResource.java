@@ -22,35 +22,15 @@ import cr.ac.tec.graph.api.dto.Persona;
 @Path("/graphs")
 public class GraphsResource {	
 	
-	/*
-	@GET
-	@Produces("application/json")
-	public Response getGraphs() {
-		return Response.status(200)
-				.entity(DB.db)
-				.build();
-	}
-	
-	@POST
-	@Consumes("application/json")
-	@Produces("application/json")
-	public Response createGraph(Persona p) {
-		DB.db.put(p.getId(), p);
-		return Response.status(200)
-				.entity(p)
-				.build();
-	}
-	*/
-	
 	/**
 	 * Crea un nuevo grafo y lo agrega a la lista 
 	 * @param g 
 	 * @return
 	 */
 	@POST
-	@Consumes("application/json")
 	@Produces("application/json")
-	public Response createGraph(Graph g) {
+	public Response createGraph() {
+		Graph g = new Graph();
 		DB.grafos.put(g.getId(), g);
 		return Response.status(200)
 				.entity(g)
@@ -74,11 +54,8 @@ public class GraphsResource {
 	 */
 	@DELETE
 	@Produces("application/json")
-	public Response deleteGraphData() {
+	public void deleteGraphData() {
 		DB.grafos.clear();
-			return Response.status(200)
-					.entity(DB.grafos)
-					.build();
 	}
 	
 	/**

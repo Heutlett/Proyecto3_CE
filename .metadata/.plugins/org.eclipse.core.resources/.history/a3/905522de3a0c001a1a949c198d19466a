@@ -1,0 +1,13 @@
+package cr.ac.tec.graph.api.resources;
+
+import cr.ac.tec.graph.api.dto.Graph;
+
+public class EdgesResource {
+
+	private Graph currentGraph;
+	
+	public EdgesResource(Graph graph) {
+		this.currentGraph = graph;
+	}
+	
+}

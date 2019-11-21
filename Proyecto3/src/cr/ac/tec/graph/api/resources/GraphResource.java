@@ -62,11 +62,14 @@ public class GraphResource {
 	
 	
 	@Path("/nodes")
-		public NodesResource handleSigleGraph() {
+		public NodesResource handleSigleNode() {
 		return new NodesResource(g);
 	}
 	
-	
+	@Path("/edges")
+	public EdgesResource handleSigleEdge() {
+		return new EdgesResource(g);
+}
 	
 	
 	

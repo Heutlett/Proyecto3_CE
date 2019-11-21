@@ -1,9 +1,11 @@
 package cr.ac.tec.graph.api.resources;
 
 import javax.ws.rs.Consumes;
+import javax.ws.rs.DELETE;
 import javax.ws.rs.GET;
 import javax.ws.rs.POST;
 import javax.ws.rs.Path;
+import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.Response;
 
@@ -46,7 +48,7 @@ public class NodesResource {
 	 */
 	@GET
 	@Produces("application/json")
-	public Response getGraphData() {
+	public Response getGraphNodes() {
 
 		if (currentGraph != null) {
 			return Response.status(200)
@@ -58,6 +60,30 @@ public class NodesResource {
 					.build();
 		}
 
+		
+	}
+	
+	/**
+	 * Borra todos los nodos del grafo 
+	 * @return
+	 */
+	@DELETE
+	@Produces("application/json")
+	public Response deleteGraphNodes() {
+		currentGraph.getNodes().clear();
+			return Response.status(200)
+					.entity(DB.grafos)
+					.build();
+	}
+	
+	/**
+	 * Busca un grafo por id y realiza diferentes acciones
+	 * @param graphId
+	 * @return
+	 */
+	@Path("{id}")
+	public NodeResource handleSigleNode(@PathParam("id") String nodeId) {
+		return new NodeResource(currentGraph, nodeId);
 	}
 	
 }
