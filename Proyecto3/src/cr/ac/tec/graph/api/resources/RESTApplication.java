@@ -14,6 +14,7 @@ public class RESTApplication extends Application {
 		classes.add(GraphsResource.class);
 		classes.add(GraphResource.class);
 		classes.add(GraphPrueba.class);
+		classes.add(NodesResource.class);
 		return classes;
 	}
 }

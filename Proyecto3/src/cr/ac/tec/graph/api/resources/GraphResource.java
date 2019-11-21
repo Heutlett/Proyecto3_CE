@@ -5,6 +5,7 @@ import java.util.UUID;
 import javax.ws.rs.DELETE;
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
+import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.Response;
 
@@ -13,46 +14,58 @@ import cr.ac.tec.graph.api.dto.Graph;
 import cr.ac.tec.graph.api.dto.Persona;
 
 public class GraphResource {
-	private String currentId;
+	
+	private Graph g;
 	
 	public GraphResource(String graphId) {
-		this.currentId = graphId;
+		this.g = DB.grafos.get(graphId);
 	}
 
+	/**
+	 * Busca el grafo con el id pasado por parametro y lo devuelve
+	 * @return
+	 */
 	@GET
 	@Produces("application/json")
 	public Response getGraphData() {
-		Graph g = DB.searchGraph(currentId);
+
 		if (g != null) {
 			return Response.status(200)
 					.entity(g)
 					.build();
+		}else {
+			return Response.status(404)
+					.entity("NO ESTA")
+					.build();
 		}
-		return Response.status(404)
-				.entity("NO ESTA")
-				.build();
+
 	}
 	
 	
-	//Enviar en modo entero /graphs/04
+	/**
+	 * Elimina el grafo con el id pasado por parametro 
+	 * @return
+	 */
 	@DELETE
 	@Produces("application/json")
 	public Response deleteGraphData() {
-		if(DB.deleteGraph(currentId)) {
+		
+		if(g != null) {
+			DB.grafos.remove(g.getId());
 			return Response.status(200)
-					.entity(currentId)
+					.entity(DB.grafos.get(g))
 					.build();
 		}
 		return Response.status(404).entity("NO ESTA")
 				.build();
 	}
 	
-	/*
-	@Path("nodes")
-	public Response crearNodo() {
-		
+	
+	@Path("/nodes")
+		public NodesResource handleSigleGraph() {
+		return new NodesResource(g);
 	}
-	*/
+	
 	
 	
 	

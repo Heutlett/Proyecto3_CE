@@ -7,6 +7,7 @@ import java.util.Map;
 import java.util.UUID;
 
 import javax.ws.rs.Consumes;
+import javax.ws.rs.DELETE;
 import javax.ws.rs.GET;
 import javax.ws.rs.POST;
 import javax.ws.rs.Path;
@@ -41,7 +42,24 @@ public class GraphsResource {
 	}
 	*/
 	
-	
+	/**
+	 * Crea un nuevo grafo y lo agrega a la lista 
+	 * @param g 
+	 * @return
+	 */
+	@POST
+	@Consumes("application/json")
+	@Produces("application/json")
+	public Response createGraph(Graph g) {
+		DB.grafos.put(g.getId(), g);
+		return Response.status(200)
+				.entity(g)
+				.build();
+	}
+	/**
+	 * Devuelve la lista de grafos
+	 * @return
+	 */
 	@GET
 	@Produces("application/json")
 	public Response getGraphs() {
@@ -50,18 +68,24 @@ public class GraphsResource {
 				.build();
 	}
 	
-	@POST
-	@Consumes("application/json")
+	/**
+	 * Borra todos los grafos 
+	 * @return
+	 */
+	@DELETE
 	@Produces("application/json")
-	public Response createGraph(Graph g) {
-		g.setId(g.getId());
-		DB.grafos.add(g);
-		return Response.status(200)
-				.entity(g)
-				.build();
+	public Response deleteGraphData() {
+		DB.grafos.clear();
+			return Response.status(200)
+					.entity(DB.grafos)
+					.build();
 	}
 	
-	
+	/**
+	 * Busca un grafo por id y realiza diferentes acciones
+	 * @param graphId
+	 * @return
+	 */
 	@Path("{id}")
 	public GraphResource handleSigleGraph(@PathParam("id") String graphId) {
 		return new GraphResource(graphId);

@@ -6,6 +6,13 @@ public class Node {
 	private int outDegree;
 	private String entity;
 		
+	public Node() {
+		this.id = "";
+		this.inDegree = 0;
+		this.outDegree = 0;
+		this.entity = "";
+	}
+	
 	public Node(String id, int inDegree, int outDegree, String entity) {
 		super();
 		this.id = id;

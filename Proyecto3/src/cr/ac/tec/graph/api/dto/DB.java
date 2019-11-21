@@ -9,7 +9,7 @@ import java.util.UUID;
 public class DB {
 	
 	public static Map<String,Persona> db = new HashMap();
-	public static ArrayList<Graph> grafos = new ArrayList<>();
+	public static Map<String, Graph> grafos = new HashMap();
 	
 	public static boolean deleteGraph(String id) {
 		

@@ -10663,3 +10663,34 @@ user global configuration and to define the default location to store repositori
 not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
 EGit might behave differently since they see different configuration options.
 This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.wst.server.discovery 1 0 2019-11-21 01:03:23.664
+!MESSAGE already installed: com.ibm.ws.st.server.wlp
+
+!ENTRY org.eclipse.wst.server.discovery 1 0 2019-11-21 01:03:23.673
+!MESSAGE already installed: org.eclipse.jst.server.generic.jonas4
+
+!ENTRY org.eclipse.wst.server.discovery 1 0 2019-11-21 01:03:38.343
+!MESSAGE already installed: com.ibm.ws.st.server.wlp
+
+!ENTRY org.eclipse.wst.server.discovery 1 0 2019-11-21 01:03:38.363
+!MESSAGE already installed: org.eclipse.jst.server.generic.jonas4
+
+!ENTRY org.eclipse.wst.server.discovery 1 0 2019-11-21 01:03:52.807
+!MESSAGE already installed: com.ibm.ws.st.server.wlp
+
+!ENTRY org.eclipse.wst.server.discovery 1 0 2019-11-21 01:03:52.835
+!MESSAGE already installed: org.eclipse.jst.server.generic.jonas4
+
+!ENTRY org.eclipse.wst.server.core 4 0 2019-11-21 01:04:34.703
+!MESSAGE Publishing failed
+!SUBENTRY 1 com.ibm.ws.st.core 0 0 2019-11-21 01:04:34.703
+!MESSAGE Publish Proyecto3
+!SUBENTRY 2 com.ibm.ws.st.core 0 0 2019-11-21 01:04:34.703
+!MESSAGE Server configuration is synchronized successfully.
+!SUBENTRY 2 com.ibm.ws.st.core 0 0 2019-11-21 01:04:34.703
+!MESSAGE Application Proyecto3 is deployed successfully.
+!SUBENTRY 1 com.ibm.ws.st.core 0 0 2019-11-21 01:04:34.703
+!MESSAGE Publish Proyecto3
+!SUBENTRY 1 com.ibm.ws.st.core 4 0 2019-11-21 01:04:34.703
+!MESSAGE Application Proyecto3 might not be started.

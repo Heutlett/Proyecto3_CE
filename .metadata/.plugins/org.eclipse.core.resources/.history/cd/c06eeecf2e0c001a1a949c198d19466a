@@ -1,0 +1,71 @@
+package cr.ac.tec.graph.api.resources;
+
+import java.util.UUID;
+
+import javax.ws.rs.DELETE;
+import javax.ws.rs.GET;
+import javax.ws.rs.Path;
+import javax.ws.rs.PathParam;
+import javax.ws.rs.Produces;
+import javax.ws.rs.core.Response;
+
+import cr.ac.tec.graph.api.dto.DB;
+import cr.ac.tec.graph.api.dto.Graph;
+import cr.ac.tec.graph.api.dto.Persona;
+
+public class GraphResource {
+	private String currentId;
+	
+	public GraphResource(String graphId) {
+		this.currentId = graphId;
+	}
+
+	/**
+	 * Busca el grafo con el id pasado por parametro y lo devuelve
+	 * @return
+	 */
+	@GET
+	@Produces("application/json")
+	public Response getGraphData() {
+		//Graph g = DB.searchGraph(currentId);
+		if (!DB.grafos.get(currentId).equals(null)) {
+			return Response.status(200)
+					.entity(DB.grafos.get(currentId))
+					.build();
+		}else {
+			return Response.status(404)
+					.entity("NO ESTA")
+					.build();
+		}
+
+	}
+	
+	
+	/**
+	 * Elimina el grafo con el id pasado por parametro 
+	 * @return
+	 */
+	@DELETE
+	@Produces("application/json")
+	public Response deleteGraphData() {
+		if(!DB.grafos.get(currentId).equals(null)) {
+			return Response.status(200)
+					.entity(DB.grafos.get(currentId))
+					.build();
+		}
+		return Response.status(404).entity("NO ESTA")
+				.build();
+	}
+	
+	/*
+	@Path("nodes")
+		public NodesResource handleSigleGraph(@PathParam("id") String graphId) {
+		return new NodesResource(graphId);
+	}
+	*/
+	
+	
+	
+	
+	
+}

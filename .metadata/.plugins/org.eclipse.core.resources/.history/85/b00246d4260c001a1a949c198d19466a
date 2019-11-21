@@ -1,0 +1,13 @@
+package cr.ac.tec.graph.api.resources;
+
+public class NodesResource {
+
+	private String currentId;
+	
+	public NodesResource(String graphId) {
+		this.currentId = graphId;
+	}
+	
+	
+	
+}
