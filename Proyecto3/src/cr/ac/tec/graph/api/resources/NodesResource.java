@@ -10,6 +10,7 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.core.Response;
 
 import cr.ac.tec.graph.api.dto.DB;
+import cr.ac.tec.graph.api.dto.Entity;
 import cr.ac.tec.graph.api.dto.Graph;
 import cr.ac.tec.graph.api.dto.Node;
 
@@ -30,9 +31,9 @@ public class NodesResource {
 	@POST
 	@Consumes("application/json")
 	@Produces("application/json")
-	public Response addNode(Node node) {
+	public Response addNode(Entity entity) {
 		if(currentGraph != null) {
-			currentGraph.getNodes().add(node);
+			currentGraph.getNodes().add(new Node(entity));
 			return Response.status(200)
 					.entity(currentGraph)
 					.build();

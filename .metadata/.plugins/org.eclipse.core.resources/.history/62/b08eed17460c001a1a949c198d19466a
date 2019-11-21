@@ -49,12 +49,12 @@ public class EdgeResource {
 	 */
 	@DELETE
 	@Produces("application/json")
-	public Response deleteEdge() {
+	public Response deleteNode() {
 		
 		if(g != null) {
-			for(int i = 0; i < g.getEdges().size(); i++) {
-				if(g.getEdges().get(i).getId().equals(idEdge)) {
-					g.getEdges().remove(i);
+			for(int i = 0; i < g.getNodes().size(); i++) {
+				if(g.getNodes().get(i).getId().equals(idNode)) {
+					g.getNodes().remove(i);
 				}
 			}
 			return Response.status(200)

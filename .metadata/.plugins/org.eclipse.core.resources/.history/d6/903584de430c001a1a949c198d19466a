@@ -9,19 +9,16 @@ public class Edge {
 	public static int idCount = 0;
 	
 	public Edge() {
-		this.id = "e"+(idCount+1);
+		this.id = ""+idCount+1;
 		this.start = "";
 		this.end = "";
 		this.weight = 0;
 	}
 	
-	public Edge(String start, String end, int weight) {
-		super();
-		this.id = "e"+(idCount+1);
+	public Edge(String start, String end, String weight) {
 		this.start = start;
 		this.end = end;
-		this.weight = weight;
-		this.idCount++;
+		this.weight;
 	}
 	
 	public String getId() {

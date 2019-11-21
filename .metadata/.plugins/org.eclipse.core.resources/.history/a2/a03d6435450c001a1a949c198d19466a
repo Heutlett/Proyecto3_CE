@@ -8,7 +8,7 @@ public class Node {
 	public static int idCount;
 		
 	public Node() {
-		this.id = "n";
+		this.id = "";
 		this.inDegree = 0;
 		this.outDegree = 0;
 		this.entity = null;
@@ -16,7 +16,7 @@ public class Node {
 	
 	public Node(Entity entity) {
 		super();
-		this.id = "n"+(idCount+1);
+		this.id = ""+(idCount+1);
 		this.entity = entity;
 		idCount++;
 	}

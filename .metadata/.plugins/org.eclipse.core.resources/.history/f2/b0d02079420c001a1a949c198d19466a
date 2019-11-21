@@ -4,19 +4,19 @@ public class Node {
 	private String id;
 	private int inDegree;
 	private int outDegree;
-	private Entity entity;
+	private String entity;
 	public static int idCount;
 		
 	public Node() {
-		this.id = "n";
+		this.id = "";
 		this.inDegree = 0;
 		this.outDegree = 0;
-		this.entity = null;
+		this.entity = "";
 	}
 	
-	public Node(Entity entity) {
+	public Node(String entity) {
 		super();
-		this.id = "n"+(idCount+1);
+		this.id = ""+(idCount+1);
 		this.entity = entity;
 		idCount++;
 	}
@@ -38,10 +38,10 @@ public class Node {
 	public void setOutDegree(int outDegree) {
 		this.outDegree = outDegree;
 	}
-	public Entity getEntity() {
+	public String getEntity() {
 		return entity;
 	}
-	public void setEntity(Entity entity) {
+	public void setEntity(String entity) {
 		this.entity = entity;
 	}
 	

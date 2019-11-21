@@ -4,8 +4,6 @@ import javax.ws.rs.Consumes;
 import javax.ws.rs.DELETE;
 import javax.ws.rs.GET;
 import javax.ws.rs.POST;
-import javax.ws.rs.Path;
-import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.Response;
 
@@ -35,7 +33,7 @@ public class EdgesResource {
 		if(currentGraph != null) {
 			currentGraph.getEdges().add(edge);
 			return Response.status(200)
-					.entity(edge.getId())
+					.entity(currentGraph)
 					.build();
 		}else {
 			return Response.status(500)
@@ -77,14 +75,6 @@ public class EdgesResource {
 					.build();
 	}
 	
-	/**
-	 * Busca un grafo por id y realiza diferentes acciones
-	 * @param graphId
-	 * @return
-	 */
-	@Path("{id}")
-	public EdgeResource handleSigleNode(@PathParam("id") String nodeId) {
-		return new EdgeResource(currentGraph, nodeId);
-	}
+	
 	
 }

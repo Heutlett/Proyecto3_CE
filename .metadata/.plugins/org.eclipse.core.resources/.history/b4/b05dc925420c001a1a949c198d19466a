@@ -10,20 +10,19 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.core.Response;
 
 import cr.ac.tec.graph.api.dto.DB;
-import cr.ac.tec.graph.api.dto.Edge;
 import cr.ac.tec.graph.api.dto.Graph;
 import cr.ac.tec.graph.api.dto.Node;
 
-public class EdgesResource {
+public class NodesResource {
 
 	private Graph currentGraph;
 	
-	public EdgesResource(Graph graph) {
+	public NodesResource(Graph graph) {
 		this.currentGraph = graph;
 	}
 	
 	/**
-	 * Inserta una arista al grafo
+	 * Inserta un nodo al grafo
 	 * @param g 
 	 * @return
 	 */
@@ -31,29 +30,29 @@ public class EdgesResource {
 	@POST
 	@Consumes("application/json")
 	@Produces("application/json")
-	public Response addEdge(Edge edge) {
+	public Response addNode(Node node) {
 		if(currentGraph != null) {
-			currentGraph.getEdges().add(edge);
+			currentGraph.getNodes().add(node);
 			return Response.status(200)
-					.entity(edge.getId())
+					.entity(currentGraph)
 					.build();
 		}else {
-			return Response.status(500)
+			return Response.status(400)
 					.build();
 		}
+
 	}
-	
 	/**
-	 * Devuelve la lista de aristas de un grafo
+	 * Devuelve la lista de nodos de un grafo
 	 * @return
 	 */
 	@GET
 	@Produces("application/json")
-	public Response getGraphEdges() {
+	public Response getGraphNodes() {
 
 		if (currentGraph != null) {
 			return Response.status(200)
-					.entity(currentGraph.getEdges())
+					.entity(currentGraph.getNodes())
 					.build();
 		}else {
 			return Response.status(404)
@@ -65,13 +64,13 @@ public class EdgesResource {
 	}
 	
 	/**
-	 * Borra todos las aristas del grafo 
+	 * Borra todos los nodos del grafo 
 	 * @return
 	 */
 	@DELETE
 	@Produces("application/json")
-	public Response deleteGraphEdges() {
-		currentGraph.getEdges().clear();
+	public Response deleteGraphNodes() {
+		currentGraph.getNodes().clear();
 			return Response.status(200)
 					.entity(DB.grafos)
 					.build();
@@ -83,8 +82,8 @@ public class EdgesResource {
 	 * @return
 	 */
 	@Path("{id}")
-	public EdgeResource handleSigleNode(@PathParam("id") String nodeId) {
-		return new EdgeResource(currentGraph, nodeId);
+	public NodeResource handleSigleNode(@PathParam("id") String nodeId) {
+		return new NodeResource(currentGraph, nodeId);
 	}
 	
 }
