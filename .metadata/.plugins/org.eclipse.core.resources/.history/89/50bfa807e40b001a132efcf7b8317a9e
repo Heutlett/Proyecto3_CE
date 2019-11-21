@@ -1,0 +1,5 @@
+package cr.ac.tec.graph.api.sigmaGraph;
+
+public class Node {
+
+}

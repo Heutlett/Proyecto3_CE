@@ -1,0 +1,94 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* ___Ajuste del body_______________*/
+body {
+    background-color: #00f;
+    padding: 20px;
+
+}
+
+
+/* ___Ajuste del body_______________*/
+main {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+
+
+}
+
+
+/* _________________________ En este lugar se la imagen del grafo ______________*/
+.container {
+    background: #eee;
+    width: 400px;
+    height: 400px;
+    display: inline-block;
+    margin: 20px;
+    text-align: left;
+    border: solid #00f 2px;
+    border-radius: 10px;
+}
+
+
+/* _________________________ En este lugar se coloca la info del grafo ______________*/
+.info {
+    background: #fff;
+    width: 400px;
+    display: inline-block;
+    border: solid #00f 2px;
+    border-radius: 10px;
+    margin: 20px;
+}
+
+
+.btnRefresf {
+    padding: 10px;
+    background-color: #00f;
+    color: #fff;
+    font-size: 20px;
+    font-family: 'Arial';
+    border-radius: 10px;
+    text-decoration: none;
+
+}
+
+.btnRefresf:hover {
+    background: #007;
+}
+
+
+/*_______________________________ Tabla para mostrar los nodos */
+
+#mi_tabla {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#mi_tabla td,
+#mi_tabla th {
+    border: 1px solid #00f;
+    padding: 3px 7px 2px 7px;
+}
+
+/*_______________________________ Tabla para mostrar los arcos */
+
+.tablaInfo {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.tablaInfo td,
+.tablaInfo th {
+    border: 1px solid #00f;
+    padding: 3px 7px 2px 7px;
+}
+
+.tableTitle {
+    background-color: #00f;
+    color: #fff;
+}

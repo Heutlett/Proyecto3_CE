@@ -1,37 +1,34 @@
 package cr.ac.tec.graph.api.dto;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 public class Graph {
 	
 	private String id;
-	private List<Node> nodes;
-	private List<Edge> edges;
-	
-	public Graph(String id, List<Node> nodes, List<Edge> edges) {
-		super();
-		this.id = id;
-		this.nodes = nodes;
-		this.edges = edges;
-	}
+    private HashMap<String, Node> nodes;
+    private HashMap<Integer, Edge> edges;
+    
 	public String getId() {
 		return id;
 	}
 	public void setId(String id) {
 		this.id = id;
 	}
-	public List<Node> getNodes() {
+	public HashMap<String, Node> getNodes() {
 		return nodes;
 	}
-	public void setNodes(List<Node> nodes) {
+	public void setNodes(HashMap<String, Node> nodes) {
 		this.nodes = nodes;
 	}
-	public List<Edge> getEdges() {
+	public HashMap<Integer, Edge> getEdges() {
 		return edges;
 	}
-	public void setEdges(List<Edge> edges) {
+	public void setEdges(HashMap<Integer, Edge> edges) {
 		this.edges = edges;
 	}
-	
+
+    
+    
 }
