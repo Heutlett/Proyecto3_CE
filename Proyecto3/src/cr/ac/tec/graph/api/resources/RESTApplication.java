@@ -13,10 +13,12 @@ public class RESTApplication extends Application {
 		Set<Class<?>> classes = new HashSet<>();
 		classes.add(GraphsResource.class);
 		classes.add(GraphResource.class);
-		classes.add(GraphPrueba.class);
 		classes.add(NodesResource.class);
 		classes.add(NodeResource.class);
 		classes.add(EdgesResource.class);
+		classes.add(EdgeResource.class);
+		classes.add(GraphsFinalResource.class);
+		classes.add(GraphResource.class);
 		return classes;
 	}
 }

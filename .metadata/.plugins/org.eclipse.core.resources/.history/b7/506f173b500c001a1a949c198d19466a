@@ -1,0 +1,9 @@
+package cr.ac.tec.graph.api.util;
+
+public class MatrizAdyacencia {
+
+	public static String[][] generarMatriz(Graph g){
+		
+	}
+	
+}

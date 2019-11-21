@@ -1,5 +1,6 @@
 package cr.ac.tec.graph.api.resources;
 
+import javax.ws.rs.Consumes;
 import javax.ws.rs.DELETE;
 import javax.ws.rs.PUT;
 import javax.ws.rs.Produces;
@@ -46,6 +47,7 @@ public class NodeResource {
 	 * 
 	 */
 	@PUT
+	@Consumes("application/json")
 	@Produces("application/json")
 	public Response updateEntity(Entity entity) {
 		

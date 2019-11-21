@@ -1,0 +1,15 @@
+package cr.ac.tec.graph.api.resources;
+
+import cr.ac.tec.graph.api.dto.Graph;
+
+public class GraphDegreeResource {
+	
+	private Graph g;
+	
+	public GraphDegreeResource(Graph g) {
+		this.g = g;
+	}
+	
+	
+
+}

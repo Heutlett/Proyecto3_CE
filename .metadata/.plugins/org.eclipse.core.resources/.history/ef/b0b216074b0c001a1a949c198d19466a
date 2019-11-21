@@ -1,0 +1,26 @@
+package cr.ac.tec.graph.api.dto;
+
+public class QueryString {
+
+	private String sort;
+
+	public QueryString() {
+		this.sort = "";
+	}
+	
+	public QueryString(String sort) {
+		this.sort = sort;
+	}
+	
+	
+	public String getSort() {
+		return sort;
+	}
+
+	public void setSort(String sort) {
+		this.sort = sort;
+	}
+	
+	
+	
+}

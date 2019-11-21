@@ -1,0 +1,17 @@
+package cr.ac.tec.graph.api.dto;
+
+public class QueryStringDijkstra {
+	
+	private String startNode;
+	private String endNode;
+	
+	public QueryStringDijkstra() {
+		this.startNode = "";
+		this.endNode = "";
+	}
+	public QueryStringDijkstra(String startNode, String endNode) {
+		this.startNode = startNode;
+		this.endNode = endNode;
+	}
+	
+}
