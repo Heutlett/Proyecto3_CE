@@ -1,16 +1,7 @@
 
-var fileJson = "datos.json";
-var URL_API;
+var fileJson = grafo;
 
 
-//___________________________________ Añade la url del API al servidor
-$.getJSON('http://localhost:9080/Proyecto3/graphs', function (data) {
-    URL_API = data;
-}).fail(function () {
-    console.log('Error al consumir la API!');
-});
-
-var fileJson = URL_API;
 
 //___________________________________ Se instancia el sigma
 var s = new sigma('container');

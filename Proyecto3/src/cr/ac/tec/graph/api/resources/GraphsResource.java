@@ -15,10 +15,13 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.core.Response;
 
 import cr.ac.tec.graph.api.dto.DB;
+import cr.ac.tec.graph.api.dto.Graph;
 import cr.ac.tec.graph.api.dto.Persona;
 
 @Path("/graphs")
 public class GraphsResource {	
+	
+	/*
 	@GET
 	@Produces("application/json")
 	public Response getGraphs() {
@@ -36,9 +39,34 @@ public class GraphsResource {
 				.entity(p)
 				.build();
 	}
+	*/
+	
+	
+	@GET
+	@Produces("application/json")
+	public Response getGraphs() {
+		return Response.status(200)
+				.entity(DB.grafos)
+				.build();
+	}
+	
+	@POST
+	@Consumes("application/json")
+	@Produces("application/json")
+	public Response createGraph(Graph g) {
+		g.setId(g.getId());
+		DB.grafos.add(g);
+		return Response.status(200)
+				.entity(g)
+				.build();
+	}
+	
 	
 	@Path("{id}")
-	public GraphResource handleSigleGraph(@PathParam("id") UUID graphId) {
+	public GraphResource handleSigleGraph(@PathParam("id") String graphId) {
 		return new GraphResource(graphId);
 	}
+	
+		
+	
 }

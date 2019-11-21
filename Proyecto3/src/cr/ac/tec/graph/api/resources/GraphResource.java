@@ -2,31 +2,60 @@ package cr.ac.tec.graph.api.resources;
 
 import java.util.UUID;
 
+import javax.ws.rs.DELETE;
 import javax.ws.rs.GET;
+import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.Response;
 
 import cr.ac.tec.graph.api.dto.DB;
+import cr.ac.tec.graph.api.dto.Graph;
 import cr.ac.tec.graph.api.dto.Persona;
 
 public class GraphResource {
-	private UUID currentId;
+	private String currentId;
 	
-	public GraphResource(UUID graphId) {
+	public GraphResource(String graphId) {
 		this.currentId = graphId;
 	}
 
 	@GET
 	@Produces("application/json")
 	public Response getGraphData() {
-		Persona p = DB.db.get(currentId);
-		if (p != null) {
+		Graph g = DB.searchGraph(currentId);
+		if (g != null) {
 			return Response.status(200)
-					.entity(p)
+					.entity(g)
 					.build();
 		}
 		return Response.status(404)
 				.entity("NO ESTA")
 				.build();
 	}
+	
+	
+	//Enviar en modo entero /graphs/04
+	@DELETE
+	@Produces("application/json")
+	public Response deleteGraphData() {
+		if(DB.deleteGraph(currentId)) {
+			return Response.status(200)
+					.entity(currentId)
+					.build();
+		}
+		return Response.status(404).entity("NO ESTA")
+				.build();
+	}
+	
+	/*
+	@Path("nodes")
+	public Response crearNodo() {
+		
+	}
+	*/
+	
+	
+	
+	
+	
 }

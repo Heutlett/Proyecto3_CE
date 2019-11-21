@@ -7,28 +7,44 @@ import java.util.List;
 public class Graph {
 	
 	private String id;
-    private HashMap<String, Node> nodes;
-    private HashMap<Integer, Edge> edges;
+    private ArrayList<Node> nodes;
+    private ArrayList<Edge> edges;
     
+    public Graph() {
+    	this.nodes = new ArrayList<>();
+        this.edges = new ArrayList<>();
+    }
+    
+    public Graph(String id) {
+    	super();
+    	this.id = id;
+    	this.nodes = new ArrayList<>();
+        this.edges = new ArrayList<>();
+    }
+
 	public String getId() {
 		return id;
 	}
+
 	public void setId(String id) {
 		this.id = id;
 	}
-	public HashMap<String, Node> getNodes() {
+
+	public ArrayList<Node> getNodes() {
 		return nodes;
 	}
-	public void setNodes(HashMap<String, Node> nodes) {
+
+	public void setNodes(ArrayList<Node> nodes) {
 		this.nodes = nodes;
 	}
-	public HashMap<Integer, Edge> getEdges() {
+
+	public ArrayList<Edge> getEdges() {
 		return edges;
 	}
-	public void setEdges(HashMap<Integer, Edge> edges) {
+
+	public void setEdges(ArrayList<Edge> edges) {
 		this.edges = edges;
 	}
-
     
-    
+	
 }

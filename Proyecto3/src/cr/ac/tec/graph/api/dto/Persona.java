@@ -1,18 +1,18 @@
 package cr.ac.tec.graph.api.dto;
 
-import java.util.UUID;
 
 public class Persona {
-	private UUID id;
+	private String id;
 	private String nombre;
 	private String edad;
 	
 	public Persona() {
-		this.id = UUID.randomUUID();
+		this.id = "0";
 	}
 	
-	public Persona(String nombre, String edad) {
-		super();		
+	public Persona(String id, String nombre, String edad) {
+		super();
+		this.id = id;
 		this.nombre = nombre;
 		this.edad = edad;
 	}
@@ -30,11 +30,11 @@ public class Persona {
 		this.edad = edad;
 	}
 
-	public UUID getId() {
+	public String getId() {
 		return id;
 	}
 
-	public void setId(UUID id) {
+	public void setId(String id) {
 		this.id = id;
 	}
 }

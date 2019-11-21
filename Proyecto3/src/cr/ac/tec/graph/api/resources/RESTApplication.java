@@ -13,6 +13,7 @@ public class RESTApplication extends Application {
 		Set<Class<?>> classes = new HashSet<>();
 		classes.add(GraphsResource.class);
 		classes.add(GraphResource.class);
+		classes.add(GraphPrueba.class);
 		return classes;
 	}
 }

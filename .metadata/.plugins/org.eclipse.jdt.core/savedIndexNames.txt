@@ -30,9 +30,9 @@ INDEX VERSION 1.131+C:\Users\carlo\OneDrive\Escritorio\TEC 2019\Material de curs
 1018526670.index
 455835702.index
 474704185.index
-1595301948.index
-1166943007.index
 3878457715.index
+1166943007.index
+1595301948.index
 996817250.index
 7726975.index
 4166838873.index
