@@ -1,61 +1,30 @@
 package cr.ac.tec.graph.api.util;
 
-import cr.ac.tec.graph.api.dto.DGraph;
+import cr.ac.tec.graph.api.dto.Edge;
 import cr.ac.tec.graph.api.dto.Graph;
 
 public class MatrizAdyacencia {
 
-	public static long[][] generarMatriz(Graph g){
+	public static DGraph generarMatriz(Graph g){
 		
-		long [][] matriz = new long[g.getNodes().size()][g.getNodes().size()];
+		String[] a = new String[g.getNodes().size()];
 		
-		for(int i = 0; i < g.getEdges().size(); i++) {
+		for(int i = 0; i < g.getNodes().size(); i++) {
 			
-			int fila = Integer.valueOf(g.getEdges().get(i).getStart().substring(1))-1;
-			int columna = Integer.valueOf(g.getEdges().get(i).getEnd().substring(1))-1;
-			
-			if(g.getEdges().get(i).getWeight() == 0) {
-				matriz[fila][columna] = 999999999;
-			}else {
-				matriz[fila][columna] = g.getEdges().get(i).getWeight();
-			}
+			a[i] = g.getNodes().get(i).getId();
 			
 		}
 		
-		return matriz;
-		
-	}
-	/*
-	 *         int vertices = 6;
-        DGraph graph = new DGraph(vertices);
-        int sourceVertex = 0;
-        graph.addEdge(0, 1, 4);
-        graph.addEdge(0, 2, 3);
-        graph.addEdge(1, 2, 1);
-        graph.addEdge(1, 3, 2);
-        graph.addEdge(2, 3, 4);
-        graph.addEdge(3, 4, 2);
-        graph.addEdge(4, 5, 6);
-        dijkstra_GetMinDistances(sourceVertex);
-	 */
-	
-	public static DGraph generarMatrizV2(Graph g){
-		
-		int vertices = g.getNodes().size();
-		DGraph graph = new DGraph(vertices);
+		DGraph graph = new DGraph(a);
 		
 		for(int i = 0; i < g.getEdges().size(); i++) {
 			
-			graph.addEdge(Integer.valueOf(g.getEdges().get(i).getStart().substring(1)), Integer.valueOf(g.getEdges().get(i).getEnd().substring(1)), g.getEdges().get(i).getWeight());
+			graph.agregarRuta(g.getEdges().get(i).getStart(), g.getEdges().get(i).getEnd(), g.getEdges().get(i).getWeight());
 			
 		}
 		
 		return graph;
 		
-		
-	
-		
-
 		
 	}
 	

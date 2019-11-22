@@ -5,18 +5,23 @@ import java.util.ArrayList;
 public class ObjectDijkstra {
 	
 	private int valorCamino;
-	private ArrayList<String> idNodesRuta;
-	private ArrayList<Node> nodes;
+	private String[] idNodesRuta;
+	private Node[] nodes;
 	
 	public ObjectDijkstra() {
 		this.valorCamino = 0;
-		this.idNodesRuta = new ArrayList<>();
-		this.nodes = new ArrayList<>();
+		this.idNodesRuta = null;
+		this.nodes = null;
 	}
 	
-	public ObjectDijkstra(int valorCamino, ArrayList idNodesRuta) {
+	public ObjectDijkstra(int valorCamino, String[] idNodesRuta) {
 		this.valorCamino = valorCamino;
 		this.idNodesRuta = idNodesRuta;
+	}
+	
+	public ObjectDijkstra(int valorCamino, Node[] nodes) {
+		this.valorCamino = valorCamino;
+		this.nodes = nodes;
 	}
 
 	public int getValorCamino() {
@@ -27,19 +32,19 @@ public class ObjectDijkstra {
 		this.valorCamino = valorCamino;
 	}
 
-	public ArrayList<String> getRuta() {
+	public String[] getRuta() {
 		return idNodesRuta;
 	}
 
-	public void setRuta(ArrayList<String> idNodesRuta) {
+	public void setRuta(String[] idNodesRuta) {
 		this.idNodesRuta = idNodesRuta;
 	}
 
-	public ArrayList<Node> getNodes() {
+	public Node[] getNodes() {
 		return nodes;
 	}
 
-	public void setNodes(ArrayList<Node> nodes) {
+	public void setNodes(Node[] nodes) {
 		this.nodes = nodes;
 	}
 	

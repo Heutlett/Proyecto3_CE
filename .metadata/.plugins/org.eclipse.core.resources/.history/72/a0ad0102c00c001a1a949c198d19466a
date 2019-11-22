@@ -1,0 +1,63 @@
+package cr.ac.tec.graph.api.util;
+
+import cr.ac.tec.graph.api.dto.Graph;
+
+public class MatrizAdyacencia {
+
+	public static long[][] generarMatriz(Graph g){
+		
+		long [][] matriz = new long[g.getNodes().size()][g.getNodes().size()];
+		
+		for(int i = 0; i < g.getEdges().size(); i++) {
+			
+			int fila = Integer.valueOf(g.getEdges().get(i).getStart().substring(1))-1;
+			int columna = Integer.valueOf(g.getEdges().get(i).getEnd().substring(1))-1;
+			
+			if(g.getEdges().get(i).getWeight() == 0) {
+				matriz[fila][columna] = 999999999;
+			}else {
+				matriz[fila][columna] = g.getEdges().get(i).getWeight();
+			}
+			
+		}
+		
+		return matriz;
+		
+	}
+	/*
+	 *      public static void main(String[] args) {
+        DGraph g = new DGraph("abcdef");
+        g.agregarRuta('a','b', 3);
+        g.agregarRuta('a','e', 6);
+        g.agregarRuta('a','f',10);
+        g.agregarRuta('b','c', 5);
+        g.agregarRuta('b','e', 2);
+        g.agregarRuta('c','d', 8);
+        g.agregarRuta('c','e', 9);
+        g.agregarRuta('c','f', 7);
+        g.agregarRuta('d','f', 4);
+        g.agregarRuta('e','f', 4);
+        char inicio = 'a';
+        char fin    = 'd';
+        String respuesta = g.encontrarRutaMinimaDijkstra(inicio, fin);
+        System.out.println(respuesta);
+    }
+	 */
+	
+	public static DGraph generarMatrizV2(Graph g){
+		
+
+		DGraph graph = new DGraph("lol");
+		
+		for(int i = 0; i )
+		
+		return graph;
+		
+		
+	
+		
+
+		
+	}
+	
+}

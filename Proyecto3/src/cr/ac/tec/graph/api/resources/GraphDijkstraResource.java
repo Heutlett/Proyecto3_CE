@@ -9,8 +9,10 @@ import cr.ac.tec.graph.api.dto.Edge;
 import cr.ac.tec.graph.api.dto.Entity;
 import cr.ac.tec.graph.api.dto.Graph;
 import cr.ac.tec.graph.api.dto.Node;
+import cr.ac.tec.graph.api.dto.ObjectDijkstra;
 import cr.ac.tec.graph.api.dto.QueryStringDegree;
 import cr.ac.tec.graph.api.dto.QueryStringDijkstra;
+import cr.ac.tec.graph.api.util.DGraph;
 import cr.ac.tec.graph.api.util.Dijkstra;
 import cr.ac.tec.graph.api.util.MatrizAdyacencia;
 
@@ -30,8 +32,9 @@ public class GraphDijkstraResource {
 	@Consumes("application/json")
 	@Produces("application/json")
 	public Response getGraphs(QueryStringDijkstra string) {
-		
+		/*
 		Graph g = new Graph();
+		
 		g.getNodes().add(new Node(new Entity("0")));
 		g.getNodes().add(new Node(new Entity("0")));
 		g.getNodes().add(new Node(new Entity("0")));
@@ -41,8 +44,6 @@ public class GraphDijkstraResource {
 		g.getNodes().add(new Node(new Entity("0")));
 		g.getNodes().add(new Node(new Entity("0")));
 		
-
-
 		
 		g.getEdges().add(new Edge("n0", "n0", 0));
 		g.getEdges().add(new Edge("n0", "n1", 16));
@@ -81,7 +82,6 @@ public class GraphDijkstraResource {
 		g.getEdges().add(new Edge("n3", "n6", 999999999));
 		g.getEdges().add(new Edge("n3", "n7", 999999999));
 		
-
 		
 		g.getEdges().add(new Edge("n4", "n0", 999999999));
 		g.getEdges().add(new Edge("n4", "n1", 999999999));
@@ -101,8 +101,6 @@ public class GraphDijkstraResource {
 		g.getEdges().add(new Edge("n5", "n5", 0));
 		g.getEdges().add(new Edge("n5", "n6", 8));
 		g.getEdges().add(new Edge("n5", "n7", 16));
-		
-
 		
 		
 		g.getEdges().add(new Edge("n6", "n0", 999999999));
@@ -132,9 +130,28 @@ public class GraphDijkstraResource {
 		g.getEdges().add(new Edge("n7", "n6", 17));
 		g.getEdges().add(new Edge("n7", "n7", 0));
 		
+		*/
+		
+		ObjectDijkstra o = MatrizAdyacencia.generarMatriz(g).encontrarRutaMinimaDijkstra(string.getStartNode(), string.getEndNode());
+		
+		String [] ids = o.getRuta();
+		Node[] nodes = new Node[ids.length];
+		
+		for(int i = 0; i < ids.length; i++) {
+			
+			for(int e = 0; e < g.getNodes().size(); e++) {
+				
+				if(ids[i].substring(4).equals(g.getNodes().get(e).getId())) {
+					nodes[i] = g.getNodes().get(e);
+				}
+				
+			}
+			
+		}
+		
 			
 		return Response.status(200)
-				.entity(Dijkstra.dijkstra_GetMinDistancesOne(MatrizAdyacencia.generarMatrizV2(g), Integer.valueOf(string.getStartNode().substring(1)),Integer.valueOf(string.getEndNode().substring(1))))
+				.entity(new ObjectDijkstra(o.getValorCamino(), nodes))
 				.build();
 		
 	}

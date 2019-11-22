@@ -32,10 +32,11 @@ public class EdgesResource {
 	@Consumes("application/json")
 	@Produces("application/json")
 	public Response addEdge(Edge edge) {
+		Edge e = new Edge(edge.getStart(), edge.getEnd(), edge.getWeight());
 		if(currentGraph != null) {
-			currentGraph.getEdges().add(edge);
+			currentGraph.getEdges().add(e);
 			return Response.status(200)
-					.entity(edge.getId())
+					.entity(e.getId())
 					.build();
 		}else {
 			return Response.status(500)

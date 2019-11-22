@@ -1,11 +1,10 @@
 package cr.ac.tec.graph.api.util;
 
-import cr.ac.tec.graph.api.dto.DGraph;
 import cr.ac.tec.graph.api.dto.Graph;
 import cr.ac.tec.graph.api.dto.ObjectDijkstra;
 
 public class Dijkstra {
-
+/*
     public static String dijkstra_GetMinDistances(DGraph graph, int sourceVertex){
         boolean[] spt = new boolean[graph.vertices];
         int [] distance = new int[graph.vertices];
@@ -108,6 +107,13 @@ public class Dijkstra {
                 }
             }
         }
+        
+        for(int i = 0; i < distance.length; i++) {
+        	System.out.print(distance[i] + ",");
+        }
+        
+       
+        
         //print shortest path tree
         return printDijkstraOne(graph, sourceVertex, distance, endVertex);
     }
@@ -134,7 +140,7 @@ public class Dijkstra {
     }
     
     
-    
+    */
     
 }
 	/*
