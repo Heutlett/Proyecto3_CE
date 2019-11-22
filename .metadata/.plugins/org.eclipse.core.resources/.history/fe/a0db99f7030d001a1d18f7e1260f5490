@@ -47,7 +47,7 @@ public class GraphResource {
 	 */
 	@DELETE
 	@Produces("application/json")
-	public Response deleteGraph() {
+	public Response deleteGraphData() {
 		
 		if(g != null) {
 			DB.grafos.remove(g.getId());

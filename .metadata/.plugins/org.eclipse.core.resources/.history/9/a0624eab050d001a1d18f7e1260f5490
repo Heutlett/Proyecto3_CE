@@ -31,7 +31,7 @@ public class GraphDijkstraResource {
 	@GET
 	@Consumes("application/json")
 	@Produces("application/json")
-	public Response getDijkstra(QueryStringDijkstra string) {
+	public Response getGraphs(QueryStringDijkstra string) {
 
 		
 		ObjectDijkstra o = MatrizAdyacencia.generarMatriz(g).encontrarRutaMinimaDijkstra(string.getStartNode(), string.getEndNode());

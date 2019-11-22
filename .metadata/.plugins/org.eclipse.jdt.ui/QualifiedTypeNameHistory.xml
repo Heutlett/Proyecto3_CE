@@ -13,9 +13,9 @@
 <fullyQualifiedTypeName name="cr.ac.tec.graph.api.util.Dijkstra"/>
 <fullyQualifiedTypeName name="java.util.ArrayList"/>
 <fullyQualifiedTypeName name="cr.ac.tec.graph.api.dto.DGraph"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="cr.ac.tec.graph.api.dto.ObjectDijkstra"/>
 <fullyQualifiedTypeName name="cr.ac.tec.graph.api.dto.Node"/>
 <fullyQualifiedTypeName name="cr.ac.tec.graph.api.dto.Entity"/>
 <fullyQualifiedTypeName name="cr.ac.tec.graph.api.dto.Edge"/>
-<fullyQualifiedTypeName name="java.util.List"/>
-<fullyQualifiedTypeName name="cr.ac.tec.graph.api.dto.ObjectDijkstra"/>
 </qualifiedTypeNameHistroy>
