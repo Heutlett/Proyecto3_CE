@@ -18,6 +18,43 @@ public class Graph {
         idCount++;
     }
     
+    public boolean agregarEdge(Edge e) {
+    	
+    	agregarVecindad(e.getStart(), e.getEnd(), e.getWeight());
+    	
+    	for(int i = 0; i < edges.size(); i++) {
+    		
+    		if(edges.get(i).getStart().equals(e.getStart()) && edges.get(i).getEnd().equals(e.getEnd())) {
+    			edges.get(i).aumentarPeso(e.getWeight());
+    			return true;
+    		}
+    		
+    	}
+    	edges.add(e);
+    	return false;
+    	
+    }
+    
+	public void agregarVecindad(String idStart, String idEnd, int peso) {
+		
+		for(int i = 0; i < nodes.size(); i++) {
+			
+			System.out.println("Comprando: " + idStart +" con: " + nodes.get(i).getId());
+			
+			if(nodes.get(i).getId().equals(idStart) && peso < 999 && peso != 0) {
+				System.out.println("Coincidimos");
+				nodes.get(i).aumentarInDegree();
+				
+			}
+			if(nodes.get(i).getId().equals(idEnd) && peso < 999 && peso != 0) {
+				
+				nodes.get(i).aumentarOutDegree();
+				
+			}
+		}
+		
+	}
+    
     public Graph(String id) {
     	super();
     	this.id = id;

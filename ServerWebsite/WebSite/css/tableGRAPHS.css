@@ -1,0 +1,21 @@
+
+
+/*____________________________________ Lista de los grafos */
+.tableListGraph {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.tableListGraph td, .tableListGraph th {
+    border: 1px solid #00f;
+    padding: 3px 7px 2px 7px;
+}
+
+.tableTitle {
+    background-color: #00f;
+    color: #fff;
+}
+
+
+
+

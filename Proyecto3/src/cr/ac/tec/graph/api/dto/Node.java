@@ -29,14 +29,14 @@ public class Node {
 	public int getInDegree() {
 		return inDegree;
 	}
-	public void setInDegree(int inDegree) {
-		this.inDegree = inDegree;
+	public void aumentarInDegree() {
+		this.inDegree++;
 	}
 	public int getOutDegree() {
 		return outDegree;
 	}
-	public void setOutDegree(int outDegree) {
-		this.outDegree = outDegree;
+	public void aumentarOutDegree() {
+		this.outDegree++;
 	}
 	public Entity getEntity() {
 		return entity;

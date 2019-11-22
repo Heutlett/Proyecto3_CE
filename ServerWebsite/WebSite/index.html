@@ -5,6 +5,10 @@
     <title>OIJ Graph</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, maximum-scale=1.0" />
+    <link rel="stylesheet" href="css/graph.css">
+    <link rel="stylesheet" href="css/tableGRAPHS.css">
+    <link rel="stylesheet" href="css/tableNODES.css">
+    <link rel="stylesheet" href="css/tablePERSON.css">
     <link rel="stylesheet" href="css/index.css">
 </head>
 
@@ -12,29 +16,35 @@
 <body>
 
 
-    <main>
-        <div class="main">
+    <main id="main" class="main">
+        <div class="divMain">
             <section>
                 <h1>OIJ Visualización de Grafos</h1>
             </section>
             <br>
             <section>
-                <input type="search" class="barSearch" id="barSearch" placeholder="Ingrese el comando de búsqueda" autofocus="true">
-                <input type="button" class="btnSearch" id="btnSearch" value="Buscar" onclick="getGrafo()">
-                <a href="graph.html">GRAFOS</a>
+                <input type="button" class="btnOPTION" id="btnGraph" value="START" onclick="getList()">
             </section>
         </div>
         <div class="img">
             <img src="logo.jpg" height="300px">
         </div>
     </main>
-<script src="sigma.js/build/sigma.require.js"></script>
+
+
+
+
+
+
+
+
+    <script src="sigma.js/build/sigma.require.js"></script>
     <script src="js/jquery-1.7.1.js"></script>
-    <script src="js/index.js"></script>
-    <script src="js/graph.js"></script>
 
 
-
+    <script src="js/tableGRAPHS.js"></script>
+    <script src="js/tableNODES.js"></script>
+    <script src="js/tablePERSON.js"></script>
 
 
 </body>

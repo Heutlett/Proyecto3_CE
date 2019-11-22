@@ -7,8 +7,8 @@ import java.util.Map;
 import java.util.UUID;
 
 public class DB {
+
 	
-	public static Map<String,Persona> db = new HashMap();
 	public static Map<String, Graph> grafos = new HashMap();
 	
 	public static boolean deleteGraph(String id) {
@@ -22,6 +22,8 @@ public class DB {
 		return false;
 		
 	}
+	
+
 	
 	public static Graph searchGraph(String id) {
 		

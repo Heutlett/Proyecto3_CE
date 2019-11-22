@@ -48,6 +48,9 @@ public class Edge {
 	public void setWeight(int weight) {
 		this.weight = weight;
 	}
+	public void aumentarPeso(int peso) {
+		this.weight += peso;
+	}
 
 	
 }

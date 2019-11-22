@@ -9,6 +9,7 @@ import javax.ws.rs.core.Response;
 
 import cr.ac.tec.graph.api.dto.DB;
 import cr.ac.tec.graph.api.dto.Graph;
+import cr.ac.tec.graph.api.dto.Node;
 import cr.ac.tec.graph.api.dto.QueryStringDegree;
 
 public class GraphDegreeResource {
@@ -28,10 +29,37 @@ public class GraphDegreeResource {
 	@Produces("application/json")
 	public Response getGraphs(QueryStringDegree string) {
 		
+		Node [] nodes = new Node[g.getNodes().size()];
+		
+		for(int i = 0; i < g.getNodes().size(); i++) {
+			
+			nodes[i] = g.getNodes().get(i);
+			
+		}
+		
 		if(string.getSort().equals("DESC")) {
 			
+			Node aux;
+			
+			for(int i = 0; i < nodes.length-1; i++) {
+				
+				for(int j = 0; j < nodes.length-1; j++) {
+					
+					int promedio1 = nodes[j + 1].getInDegree() + nodes[j + 1].getOutDegree();
+					int promedio2 = nodes[j].getInDegree() + nodes[j].getOutDegree();
+					
+	                if (promedio1 < promedio2) {
+	                    aux = nodes[j + 1];
+	                    nodes[j + 1] = nodes[j];
+	                    nodes[j] = aux;
+	                }
+					
+				}
+				
+			}
+			
 			return Response.status(200)
-					.entity("Ordenando descendente")
+					.entity(nodes)
 					.build();
 			
 		}else if(string.getSort().equals("ASC")) {

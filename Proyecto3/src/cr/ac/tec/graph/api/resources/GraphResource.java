@@ -11,7 +11,6 @@ import javax.ws.rs.core.Response;
 
 import cr.ac.tec.graph.api.dto.DB;
 import cr.ac.tec.graph.api.dto.Graph;
-import cr.ac.tec.graph.api.dto.Persona;
 
 public class GraphResource {
 	

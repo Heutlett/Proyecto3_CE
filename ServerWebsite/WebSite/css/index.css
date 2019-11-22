@@ -7,11 +7,18 @@
 /*______________________ Ventana principal___________________*/
 
 body{
-    background-color: #f00;
+    background-color: #000;
     padding: 10px;
 }
 
-.main {
+
+main {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.divMain {
     margin-top: 30px;
     background-color: #fff;
     padding: 50px;
@@ -21,35 +28,37 @@ body{
 
 h1{
     font-family: 'Arial';
-}
-
-
-/*_______________________ Barra de búsqueda y botón_______________*/
-
-.barSearch{
-    font-family: 'Arial';
-    text-align: center;
-    width: 100%;
-    height: 40px;
-    padding: 10px;
-    border-radius: 5px;
-    border-color: #f00;
-}
-
-.btnSearch{
-    font-family: 'Arial';
     margin-top: 20px;
+    font-size: 40px;
+}
+
+
+/*_______________________ Barra de búsqueda y botones_______________*/
+
+
+.btnOPTION{
+    font-family: 'Arial';
+    margin: 5px;
     text-align: center;
-    width: 70px;
     height: 40px;
     padding: 10px;
-    border-radius: 5px;
-    border-color: #f00;
+    background-color: #000;
+    color: #fff;
+}
+
+.btnOPTION:hover{
+    background-color: #999;
 }
 
 /*_______________________ Imagen _____________________________*/
 
 .img{
+    margin-top: 20px;
+    height : 300px;
     width: 100%;
     text-align: center;
+}
+
+.img img{
+    border-radius: 20px;
 }

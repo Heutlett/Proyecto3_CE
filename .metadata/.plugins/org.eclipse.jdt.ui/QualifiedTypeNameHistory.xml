@@ -1,5 +1,21 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="cr.ac.tec.graph.api.resources.GraphPrueba"/>
+<fullyQualifiedTypeName name="javax.ws.rs.DELETE"/>
+<fullyQualifiedTypeName name="javax.ws.rs.PUT"/>
+<fullyQualifiedTypeName name="cr.ac.tec.graph.api.resources.NodeResource"/>
+<fullyQualifiedTypeName name="javax.ws.rs.Path"/>
 <fullyQualifiedTypeName name="java.util.HashMap"/>
+<fullyQualifiedTypeName name="cr.ac.tec.graph.api.dto.QueryString"/>
+<fullyQualifiedTypeName name="cr.ac.tec.graph.api.dto.QueryStringDijkstra"/>
+<fullyQualifiedTypeName name="cr.ac.tec.graph.api.util.MatrizAdyacencia"/>
+<fullyQualifiedTypeName name="cr.ac.tec.graph.api.dto.Graph"/>
+<fullyQualifiedTypeName name="cr.ac.tec.graph.api.util.Dijkstra"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="cr.ac.tec.graph.api.dto.DGraph"/>
+<fullyQualifiedTypeName name="cr.ac.tec.graph.api.dto.Node"/>
+<fullyQualifiedTypeName name="cr.ac.tec.graph.api.dto.Entity"/>
+<fullyQualifiedTypeName name="cr.ac.tec.graph.api.dto.Edge"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="cr.ac.tec.graph.api.dto.ObjectDijkstra"/>
 </qualifiedTypeNameHistroy>

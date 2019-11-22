@@ -33,8 +33,9 @@ public class EdgesResource {
 	@Produces("application/json")
 	public Response addEdge(Edge edge) {
 		Edge e = new Edge(edge.getStart(), edge.getEnd(), edge.getWeight());
-		if(currentGraph != null) {
-			currentGraph.getEdges().add(e);
+		
+		if(!currentGraph.equals(null)) {
+			currentGraph.agregarEdge(edge);
 			return Response.status(200)
 					.entity(e.getId())
 					.build();
