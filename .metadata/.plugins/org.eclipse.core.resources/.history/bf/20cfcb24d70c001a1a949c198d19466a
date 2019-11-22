@@ -32,7 +32,7 @@ public class GraphDijkstraResource {
 	@Consumes("application/json")
 	@Produces("application/json")
 	public Response getGraphs(QueryStringDijkstra string) {
-		
+		/*
 		Graph g = new Graph();
 		
 		g.getNodes().add(new Node(new Entity("0")));
@@ -130,7 +130,7 @@ public class GraphDijkstraResource {
 		g.getEdges().add(new Edge("n7", "n6", 17));
 		g.getEdges().add(new Edge("n7", "n7", 0));
 		
-		
+		*/
 		
 		ObjectDijkstra o = MatrizAdyacencia.generarMatriz(g).encontrarRutaMinimaDijkstra(string.getStartNode(), string.getEndNode());
 		
@@ -141,7 +141,7 @@ public class GraphDijkstraResource {
 			
 			for(int e = 0; e < g.getNodes().size(); e++) {
 				
-				if(ids[i].substring(4).equals(g.getNodes().get(e).getId())) {
+				if(ids[i].substring(12).equals(g.getNodes().get(e).getId())) {
 					nodes[i] = g.getNodes().get(e);
 				}
 				

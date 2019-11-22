@@ -141,7 +141,7 @@ public class GraphDijkstraResource {
 			
 			for(int e = 0; e < g.getNodes().size(); e++) {
 				
-				if(ids[i].substring(4).equals(g.getNodes().get(e).getId())) {
+				if(ids[i].substring(12).equals(g.getNodes().get(e).getId())) {
 					nodes[i] = g.getNodes().get(e);
 				}
 				
