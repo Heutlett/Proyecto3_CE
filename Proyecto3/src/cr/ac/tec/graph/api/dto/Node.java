@@ -5,10 +5,10 @@ public class Node {
 	private int inDegree;
 	private int outDegree;
 	private Entity entity;
-	public static int idCount;
+	public static int idCount = -1;
 		
 	public Node() {
-		this.id = "n";
+		this.id = "n"+(idCount+1);;
 		this.inDegree = 0;
 		this.outDegree = 0;
 		this.entity = null;

@@ -1,0 +1,29 @@
+package cr.ac.tec.graph.api.util;
+
+import cr.ac.tec.graph.api.dto.Graph;
+
+public class MatrizAdyacencia {
+
+	public static int[][] generarMatriz(Graph g){
+		
+		long [][] matriz = new long[g.getNodes().size()][g.getNodes().size()];
+		
+		for(int i = 0; i < g.getEdges().size(); i++) {
+			
+			int fila = Integer.valueOf(g.getEdges().get(i).getStart().substring(1))-1;
+			int columna = Integer.valueOf(g.getEdges().get(i).getEnd().substring(1))-1;
+			
+			if(g.getEdges().get(i).getWeight() == 0) {
+				matriz[fila][columna] = 999;
+			}else {
+				matriz[fila][columna] = g.getEdges().get(i).getWeight();
+			}
+			
+		}
+		
+		return matriz;
+		
+	}
+	
+	
+}

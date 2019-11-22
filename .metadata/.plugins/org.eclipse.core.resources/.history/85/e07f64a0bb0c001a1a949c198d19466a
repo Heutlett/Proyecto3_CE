@@ -1,0 +1,153 @@
+package cr.ac.tec.graph.api.util;
+
+import cr.ac.tec.graph.api.dto.DGraph;
+import cr.ac.tec.graph.api.dto.Graph;
+import cr.ac.tec.graph.api.dto.ObjectDijkstra;
+
+public class Dijkstra {
+
+    public static String dijkstra_GetMinDistances(DGraph graph, int sourceVertex){
+        boolean[] spt = new boolean[graph.vertices];
+        int [] distance = new int[graph.vertices];
+        int INFINITY = Integer.MAX_VALUE;
+
+        //Initialize all the distance to infinity
+        for (int i = 0; i <graph.vertices ; i++) {
+            distance[i] = INFINITY;
+        }
+
+        //start from the vertex 0
+        distance[sourceVertex] = 0;
+
+        //create SPT
+        for (int i = 0; i <graph.vertices ; i++) {
+
+            //get the vertex with the minimum distance
+            int vertex_U = graph.getMinimumVertex(spt, distance);
+
+            //include this vertex in SPT
+            spt[vertex_U] = true;
+
+            //iterate through all the adjacent vertices of above vertex and update the keys
+            for (int vertex_V = 0; vertex_V <graph.vertices ; vertex_V++) {
+                //check of the edge between vertex_U and vertex_V
+                if(graph.matrix[vertex_U][vertex_V]>0){
+                    //check if this vertex 'vertex_V' already in spt and
+                    // if distance[vertex_V]!=Infinity
+
+                    if(spt[vertex_V]==false && graph.matrix[vertex_U][vertex_V]!=INFINITY){
+                        //check if distance needs an update or not
+                        //means check total weight from source to vertex_V is less than
+                        //the current distance value, if yes then update the distance
+
+                        int newKey =  graph.matrix[vertex_U][vertex_V] + distance[vertex_U];
+                        if(newKey<distance[vertex_V])
+                            distance[vertex_V] = newKey;
+                    }
+                }
+            }
+        }
+        //print shortest path tree
+        return printDijkstra(graph, sourceVertex, distance);
+    }
+
+    public static String printDijkstra(DGraph g, int sourceVertex, int [] key){
+    	
+    	String text = "";
+    	
+        System.out.println("Dijkstra Algorithm: (Adjacency Matrix)");
+        for (int i = 0; i <g.vertices ; i++) {
+        	
+        	text += "Source Vertex: " + sourceVertex + " to vertex " +   + i +
+                    " distance: " + key[i] + "\n";
+        	
+        }
+        
+        return text;
+    }
+    
+    
+    public static String dijkstra_GetMinDistancesOne(DGraph graph, int sourceVertex, int endVertex){
+        boolean[] spt = new boolean[graph.vertices];
+        int [] distance = new int[graph.vertices];
+        int INFINITY = Integer.MAX_VALUE;
+
+        //Initialize all the distance to infinity
+        for (int i = 0; i <graph.vertices ; i++) {
+            distance[i] = INFINITY;
+        }
+
+        //start from the vertex 0
+        distance[sourceVertex] = 0;
+
+        //create SPT
+        for (int i = 0; i <graph.vertices ; i++) {
+
+            //get the vertex with the minimum distance
+            int vertex_U = graph.getMinimumVertex(spt, distance);
+
+            //include this vertex in SPT
+            spt[vertex_U] = true;
+
+            //iterate through all the adjacent vertices of above vertex and update the keys
+            for (int vertex_V = 0; vertex_V <graph.vertices ; vertex_V++) {
+                //check of the edge between vertex_U and vertex_V
+                if(graph.matrix[vertex_U][vertex_V]>0){
+                    //check if this vertex 'vertex_V' already in spt and
+                    // if distance[vertex_V]!=Infinity
+
+                    if(spt[vertex_V]==false && graph.matrix[vertex_U][vertex_V]!=INFINITY){
+                        //check if distance needs an update or not
+                        //means check total weight from source to vertex_V is less than
+                        //the current distance value, if yes then update the distance
+
+                        int newKey =  graph.matrix[vertex_U][vertex_V] + distance[vertex_U];
+                        if(newKey<distance[vertex_V])
+                            distance[vertex_V] = newKey;
+                    }
+                }
+            }
+        }
+        //print shortest path tree
+        return printDijkstraOne(graph, sourceVertex, distance, endVertex);
+    }
+
+    public static String printDijkstraOne(DGraph g, int sourceVertex, int [] key, int endVertex){
+    	
+    	String text = "";
+    	
+        System.out.println("Dijkstra Algorithm: (Adjacency Matrix)");
+        for (int i = 0; i <g.vertices ; i++) {
+        	
+        	if(i == endVertex) {
+            	
+            	text += "Source Vertex: " + sourceVertex + " to vertex " +   + i +
+                        " distance: " + key[i] + "\n";
+        	}
+
+        	
+        }
+        
+        return text;
+    }
+    
+    
+    
+    
+}
+	/*
+    public static void main(String[] args) {
+        int vertices = 6;
+        DGraph graph = new DGraph(vertices);
+        int sourceVertex = 0;
+        graph.addEdge(0, 1, 4);
+        graph.addEdge(0, 2, 3);
+        graph.addEdge(1, 2, 1);
+        graph.addEdge(1, 3, 2);
+        graph.addEdge(2, 3, 4);
+        graph.addEdge(3, 4, 2);
+        graph.addEdge(4, 5, 6);
+        dijkstra_GetMinDistances(sourceVertex);
+    }
+	*/
+

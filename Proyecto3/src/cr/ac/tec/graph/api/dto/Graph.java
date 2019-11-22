@@ -9,7 +9,7 @@ public class Graph {
 	private String id;
     private ArrayList<Node> nodes;
     private ArrayList<Edge> edges;
-    public static int idCount = 0;
+    public static int idCount = -1;
     
     public Graph() {
     	this.id = "g"+(idCount+1);

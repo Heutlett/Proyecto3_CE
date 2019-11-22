@@ -10818,3 +10818,39 @@ java.lang.IllegalStateException: Call stack for thread main
 	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:660)
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:597)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1468)
+
+!ENTRY com.ibm.ws.st.core 4 0 2019-11-21 12:34:12.211
+!MESSAGE Failed to launch process
+!STACK 1
+org.eclipse.core.runtime.CoreException: Port 9080 required by GraphServer at localhost is already in use. The server might be running in another process, or a system process might be using the port. To start this server you need to stop the other process or change the port numbers.
+	at com.ibm.ws.st.core.internal.WebSphereServerBehaviour.preLaunch(WebSphereServerBehaviour.java:733)
+	at com.ibm.ws.st.core.internal.launch.BaseLibertyLaunchConfiguration.launch(BaseLibertyLaunchConfiguration.java:115)
+	at com.ibm.ws.st.core.internal.launch.WebSphereLaunchConfigurationDelegate.launch(WebSphereLaunchConfigurationDelegate.java:83)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:860)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:719)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1017)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$2.run(DebugUIPlugin.java:1220)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SUBENTRY 1 com.ibm.ws.st.core 4 0 2019-11-21 12:34:12.213
+!MESSAGE Port 9080 required by GraphServer at localhost is already in use. The server might be running in another process, or a system process might be using the port. To start this server you need to stop the other process or change the port numbers.
+
+!ENTRY com.ibm.ws.st.core 4 0 2019-11-21 12:34:12.221
+!MESSAGE Port 9080 required by GraphServer at localhost is already in use. The server might be running in another process, or a system process might be using the port. To start this server you need to stop the other process or change the port numbers.
+
+!ENTRY com.ibm.ws.st.core 4 0 2019-11-21 15:24:35.233
+!MESSAGE Failed to launch process
+!STACK 1
+org.eclipse.core.runtime.CoreException: Port 9080 required by GraphServer at localhost is already in use. The server might be running in another process, or a system process might be using the port. To start this server you need to stop the other process or change the port numbers.
+	at com.ibm.ws.st.core.internal.WebSphereServerBehaviour.preLaunch(WebSphereServerBehaviour.java:733)
+	at com.ibm.ws.st.core.internal.launch.BaseLibertyLaunchConfiguration.launch(BaseLibertyLaunchConfiguration.java:115)
+	at com.ibm.ws.st.core.internal.launch.WebSphereLaunchConfigurationDelegate.launch(WebSphereLaunchConfigurationDelegate.java:83)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:860)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:719)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1017)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$2.run(DebugUIPlugin.java:1220)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SUBENTRY 1 com.ibm.ws.st.core 4 0 2019-11-21 15:24:35.233
+!MESSAGE Port 9080 required by GraphServer at localhost is already in use. The server might be running in another process, or a system process might be using the port. To start this server you need to stop the other process or change the port numbers.
+
+!ENTRY com.ibm.ws.st.core 4 0 2019-11-21 15:24:35.268
+!MESSAGE Port 9080 required by GraphServer at localhost is already in use. The server might be running in another process, or a system process might be using the port. To start this server you need to stop the other process or change the port numbers.

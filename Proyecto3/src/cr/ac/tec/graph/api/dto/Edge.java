@@ -6,7 +6,7 @@ public class Edge {
 	private String start;
 	private String end;
 	private int weight;
-	public static int idCount = 0;
+	public static int idCount = -1;
 	
 	public Edge() {
 		this.id = "e"+(idCount+1);

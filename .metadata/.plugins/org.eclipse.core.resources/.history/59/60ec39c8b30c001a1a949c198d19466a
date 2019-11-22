@@ -1,0 +1,13 @@
+package cr.ac.tec.graph.api.dto;
+
+public class DGraph {
+
+        int vertices;
+        int matrix[][];
+
+        public DGraph(int vertex) {
+            this.vertices = vertex;
+            matrix = new int[vertex][vertex];
+        }
+	
+}

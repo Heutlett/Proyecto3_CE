@@ -1,0 +1,47 @@
+package cr.ac.tec.graph.api.dto;
+
+import java.util.ArrayList;
+
+public class ObjectDijkstra {
+	
+	private int valorCamino;
+	private ArrayList<String> idNodesRuta;
+	private ArrayList<Node> nodes;
+	
+	public ObjectDijkstra() {
+		this.valorCamino = 0;
+		this.idNodesRuta = new ArrayList<>();
+		this.nodes = new ArrayList<>();
+	}
+	
+	public ObjectDijkstra(int valorCamino, ArrayList idNodesRuta) {
+		this.valorCamino = valorCamino;
+		this.idNodesRuta = idNodesRuta;
+	}
+
+	public int getValorCamino() {
+		return valorCamino;
+	}
+
+	public void setValorCamino(int valorCamino) {
+		this.valorCamino = valorCamino;
+	}
+
+	public ArrayList<String> getRuta() {
+		return ruta;
+	}
+
+	public void setRuta(String ruta) {
+		this.ruta = ruta;
+	}
+
+	public ArrayList<Node> getNodes() {
+		return nodes;
+	}
+
+	public void setNodes(ArrayList<Node> nodes) {
+		this.nodes = nodes;
+	}
+	
+
+}
