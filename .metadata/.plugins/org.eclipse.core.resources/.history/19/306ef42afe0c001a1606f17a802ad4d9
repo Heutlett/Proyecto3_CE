@@ -84,7 +84,7 @@ public class GraphDegreeResource {
 			}
 			
 			return Response.status(200)
-					.entity(nodes)
+					.entity("Ordenando ascendente")
 					.build();
 			
 		}

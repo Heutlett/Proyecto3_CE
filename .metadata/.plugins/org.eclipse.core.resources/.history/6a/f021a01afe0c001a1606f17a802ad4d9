@@ -48,7 +48,7 @@ public class GraphDegreeResource {
 					int promedio1 = nodes[j + 1].getInDegree() + nodes[j + 1].getOutDegree();
 					int promedio2 = nodes[j].getInDegree() + nodes[j].getOutDegree();
 					
-	                if (promedio1 > promedio2) {
+	                if (promedio1 < promedio2) {
 	                    aux = nodes[j + 1];
 	                    nodes[j + 1] = nodes[j];
 	                    nodes[j] = aux;
@@ -64,27 +64,8 @@ public class GraphDegreeResource {
 			
 		}else if(string.getSort().equals("ASC")) {
 			
-			Node aux;
-			
-			for(int i = 0; i < nodes.length-1; i++) {
-				
-				for(int j = 0; j < nodes.length-1; j++) {
-					
-					int promedio1 = nodes[j + 1].getInDegree() + nodes[j + 1].getOutDegree();
-					int promedio2 = nodes[j].getInDegree() + nodes[j].getOutDegree();
-					
-	                if (promedio1 < promedio2) {
-	                    aux = nodes[j + 1];
-	                    nodes[j + 1] = nodes[j];
-	                    nodes[j] = aux;
-	                }
-					
-				}
-				
-			}
-			
 			return Response.status(200)
-					.entity(nodes)
+					.entity("Ordenando ascendente")
 					.build();
 			
 		}
