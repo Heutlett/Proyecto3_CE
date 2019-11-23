@@ -19,7 +19,7 @@ public class RESTApplication extends Application {
 		classes.add(EdgeResource.class);
 		classes.add(GraphsFinalResource.class);
 		classes.add(GraphDijkstraResource.class);
-
+		classes.add(CreateGraphPrueba.class);
 		return classes;
 	}
 }

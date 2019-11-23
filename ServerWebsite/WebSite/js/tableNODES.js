@@ -111,9 +111,9 @@ function createEdge(row){
 //__________________________________________________ Funcion para crear un nuevo Grafo
 function newNODE() {
     console.log(URL_API + presentGRAPH + "/nodes");
-    var Nentitiy = prompt("Ingrese un nombre para el nodo");
+    var Nentitiy = prompt("Ingrese un nombre para el entity");
     var enviar = {
-        "entitiy": Nentitiy,
+        "id": Nentitiy
     };
     $.ajax({
         url: URL_API + presentGRAPH + "/nodes",
@@ -177,8 +177,8 @@ function newEDGE() {
     var enviar = {
 	"start" : Nstart,
 	"end" : Nfinish,
-	"weight" : Ntime,
-};
+	"weight" : Ntime
+    };
     $.ajax({
         url: URL_API + presentGRAPH + "/edges",
         type: 'POST',
@@ -226,16 +226,11 @@ function showDijkstra(){
     var firstNode = prompt("Ingrese el nodo inicial");
     var lastNode = prompt("Ingrese el nodo final");
     
-    var enviar = { "startNode": firstNode,
-                    "endNode": lastNode };
 
-    console.log(enviar);
     
     $.ajax({
-    url: URL_API +  "/graph/" + presentGRAPH + "/dijkstra",
+    url: "http://localhost:9080/Proyecto3/graph/" + presentGRAPH + "/dijkstra" + "?startNode="+firstNode+"&endNode="+lastNode,
     type: 'GET',
-    contentType: 'application/json',
-    data: enviar,
     dataType: 'json',
     error: function(respuesta){
       alert("¡Oh No! Intente de nuevo");

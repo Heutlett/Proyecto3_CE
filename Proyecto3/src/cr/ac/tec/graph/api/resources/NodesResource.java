@@ -31,9 +31,9 @@ public class NodesResource {
 	@POST
 	@Consumes("application/json")
 	@Produces("application/json")
-	public Response addNode(Entity entity) {
+	public Response addNode(Entity  entity) {
 		if(currentGraph != null) {
-			currentGraph.getNodes().add(new Node(entity));
+			currentGraph.agregarNodo(entity);
 			return Response.status(200)
 					.entity(currentGraph)
 					.build();

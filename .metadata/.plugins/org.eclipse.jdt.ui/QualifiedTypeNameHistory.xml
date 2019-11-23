@@ -4,7 +4,6 @@
 <fullyQualifiedTypeName name="javax.ws.rs.DELETE"/>
 <fullyQualifiedTypeName name="javax.ws.rs.PUT"/>
 <fullyQualifiedTypeName name="cr.ac.tec.graph.api.resources.NodeResource"/>
-<fullyQualifiedTypeName name="javax.ws.rs.Path"/>
 <fullyQualifiedTypeName name="java.util.HashMap"/>
 <fullyQualifiedTypeName name="cr.ac.tec.graph.api.dto.QueryString"/>
 <fullyQualifiedTypeName name="cr.ac.tec.graph.api.dto.QueryStringDijkstra"/>
@@ -18,4 +17,8 @@
 <fullyQualifiedTypeName name="cr.ac.tec.graph.api.dto.Node"/>
 <fullyQualifiedTypeName name="cr.ac.tec.graph.api.dto.Entity"/>
 <fullyQualifiedTypeName name="cr.ac.tec.graph.api.dto.Edge"/>
+<fullyQualifiedTypeName name="javax.ws.rs.QueryParam"/>
+<fullyQualifiedTypeName name="javax.ws.rs.Path"/>
+<fullyQualifiedTypeName name="javax.ws.rs.core.Response"/>
+<fullyQualifiedTypeName name="cr.ac.tec.graph.api.dto.NodeTmp"/>
 </qualifiedTypeNameHistroy>

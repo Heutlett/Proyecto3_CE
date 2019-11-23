@@ -5,12 +5,12 @@ import java.util.HashMap;
 import javax.ws.rs.Consumes;
 import javax.ws.rs.GET;
 import javax.ws.rs.Produces;
+import javax.ws.rs.QueryParam;
 import javax.ws.rs.core.Response;
 
 import cr.ac.tec.graph.api.dto.DB;
 import cr.ac.tec.graph.api.dto.Graph;
 import cr.ac.tec.graph.api.dto.Node;
-import cr.ac.tec.graph.api.dto.QueryStringDegree;
 
 public class GraphDegreeResource {
 	
@@ -25,9 +25,8 @@ public class GraphDegreeResource {
 	 * @return
 	 */
 	@GET
-	@Consumes("application/json")
 	@Produces("application/json")
-	public Response getGraphs(QueryStringDegree string) {
+	public Response getNodesByDegree(@QueryParam("sort") String sort) {
 		
 		Node [] nodes = new Node[g.getNodes().size()];
 		
@@ -37,7 +36,7 @@ public class GraphDegreeResource {
 			
 		}
 		
-		if(string.getSort().equals("DESC")) {
+		if(sort.equals("DESC")) {
 			
 			Node aux;
 			
@@ -62,7 +61,7 @@ public class GraphDegreeResource {
 					.entity(nodes)
 					.build();
 			
-		}else if(string.getSort().equals("ASC")) {
+		}else if(sort.equals("ASC")) {
 			
 			Node aux;
 			

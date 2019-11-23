@@ -1,0 +1,70 @@
+package cr.ac.tec.graph.api.resources;
+
+import javax.ws.rs.Consumes;
+import javax.ws.rs.GET;
+import javax.ws.rs.Path;
+import javax.ws.rs.Produces;
+import javax.ws.rs.QueryParam;
+import javax.ws.rs.core.Response;
+
+import cr.ac.tec.graph.api.dto.Edge;
+import cr.ac.tec.graph.api.dto.Entity;
+import cr.ac.tec.graph.api.dto.Graph;
+import cr.ac.tec.graph.api.dto.Node;
+import cr.ac.tec.graph.api.dto.ObjectDijkstra;
+import cr.ac.tec.graph.api.dto.QueryStringDegree;
+import cr.ac.tec.graph.api.util.DGraph;
+import cr.ac.tec.graph.api.util.Dijkstra;
+import cr.ac.tec.graph.api.util.MatrizAdyacencia;
+
+public class GraphDijkstraResource {
+	
+	private Graph g;
+	
+	public GraphDijkstraResource(Graph g) {
+		this.g = g;
+	}
+	
+	/**
+	 * Devuelve la lista de grafos
+	 * @return
+	 */
+	@GET
+	@Produces("application/json")
+	public Response getDijkstra(@QueryParam("startNode") String firstname, 
+			@QueryParam("endNode") String lastname) {
+
+		
+		ObjectDijkstra o = MatrizAdyacencia.generarMatriz(g).encontrarRutaMinimaDijkstra(firstname, lastname);
+		
+		String [] ids = o.getRuta();
+		Node[] nodes = new Node[ids.length];
+		
+		for(int i = 0; i < ids.length; i++) {
+			
+			for(int e = 0; e < g.getNodes().size(); e++) {
+				
+				if(ids[i].substring(4).equals(g.getNodes().get(e).getId())) {
+					nodes[i] = g.getNodes().get(e);
+				}
+				
+			}
+			
+		}
+		
+		ObjectDijkstra resultado = new ObjectDijkstra(o.getValorCamino(), nodes);
+			
+		if(resultado != null) {
+			return Response.status(200)
+					.entity(resultado)
+					.build();
+		}else {
+			return Response.status(500)
+					.build();
+		}
+		
+		
+		
+	}
+
+}

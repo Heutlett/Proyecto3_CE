@@ -34,15 +34,20 @@ public class EdgesResource {
 	public Response addEdge(Edge edge) {
 		Edge e = new Edge(edge.getStart(), edge.getEnd(), edge.getWeight());
 		
-		if(!currentGraph.equals(null)) {
-			currentGraph.agregarEdge(edge);
+		if(currentGraph.agregarEdge(edge)) {
+			
 			return Response.status(200)
 					.entity(e.getId())
 					.build();
+			
 		}else {
 			return Response.status(500)
+					.entity("Eror, algun nodo no existe")
 					.build();
 		}
+		
+
+		
 	}
 	
 	/**

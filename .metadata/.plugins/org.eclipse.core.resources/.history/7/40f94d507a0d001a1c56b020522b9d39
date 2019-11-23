@@ -1,0 +1,34 @@
+package cr.ac.tec.graph.api.dto;
+
+public class NodeTmp {
+	
+	private String id;
+	private String entity;
+	
+	
+	public NodeTmp() {
+		this.id = "";
+		this.entity = "";
+	}
+	
+	public NodeTmp(String id, String entity) {
+		super();
+		this.id = id;
+		this.entity = entity;
+	}
+	public String getId() {
+		return id;
+	}
+	public void setId(String id) {
+		this.id = id;
+	}
+	public String getEntity() {
+		return entity;
+	}
+	public void setEntity(String entity) {
+		this.entity = entity;
+	}
+	
+	
+
+}

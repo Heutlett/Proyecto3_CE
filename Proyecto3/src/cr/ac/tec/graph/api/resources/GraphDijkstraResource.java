@@ -2,7 +2,9 @@ package cr.ac.tec.graph.api.resources;
 
 import javax.ws.rs.Consumes;
 import javax.ws.rs.GET;
+import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
+import javax.ws.rs.QueryParam;
 import javax.ws.rs.core.Response;
 
 import cr.ac.tec.graph.api.dto.Edge;
@@ -10,10 +12,7 @@ import cr.ac.tec.graph.api.dto.Entity;
 import cr.ac.tec.graph.api.dto.Graph;
 import cr.ac.tec.graph.api.dto.Node;
 import cr.ac.tec.graph.api.dto.ObjectDijkstra;
-import cr.ac.tec.graph.api.dto.QueryStringDegree;
-import cr.ac.tec.graph.api.dto.QueryStringDijkstra;
 import cr.ac.tec.graph.api.util.DGraph;
-import cr.ac.tec.graph.api.util.Dijkstra;
 import cr.ac.tec.graph.api.util.MatrizAdyacencia;
 
 public class GraphDijkstraResource {
@@ -29,12 +28,12 @@ public class GraphDijkstraResource {
 	 * @return
 	 */
 	@GET
-	@Consumes("application/json")
 	@Produces("application/json")
-	public Response getDijkstra(QueryStringDijkstra string) {
+	public Response getDijkstra(@QueryParam("startNode") String firstname, 
+			@QueryParam("endNode") String lastname) {
 
 		
-		ObjectDijkstra o = MatrizAdyacencia.generarMatriz(g).encontrarRutaMinimaDijkstra(string.getStartNode(), string.getEndNode());
+		ObjectDijkstra o = MatrizAdyacencia.generarMatriz(g).encontrarRutaMinimaDijkstra(firstname, lastname);
 		
 		String [] ids = o.getRuta();
 		Node[] nodes = new Node[ids.length];

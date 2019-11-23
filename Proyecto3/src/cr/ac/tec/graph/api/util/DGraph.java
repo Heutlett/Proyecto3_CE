@@ -74,6 +74,7 @@ public class DGraph {
         cola.add(ni);                   // Agregar nodo inicial a la cola de prioridad
         while(!cola.isEmpty()) {        // mientras que la cola no esta vacia
             Nodo tmp = cola.poll();     // saca el primer elemento
+            System.out.println(tmp.id);
             listos.add(tmp);            // lo manda a la lista de terminados
             int p = posicionNodo(tmp.id);
             for(int j=0; j<grafo[p].length; j++) {  // revisa los nodos hijos del nodo tmp

@@ -18,20 +18,94 @@ public class Graph {
         idCount++;
     }
     
-    public boolean agregarEdge(Edge e) {
+    public boolean agregarNodo(Entity entity) {
     	
-    	agregarVecindad(e.getStart(), e.getEnd(), e.getWeight());
+    	for(int i = 0; i < nodes.size(); i++) {
+    		
+    		if(nodes.get(i).getId().equals(id)) {
+    			return false;
+    		}
+    		
+    	}
+    	
+    	nodes.add(new Node(entity));
+    	return true;
+    	
+    }
+    
+    public boolean borrarNodo(String id){
+    	
+    	borrarVecindad(id);
+    	
+    	for(int i = 0; i < nodes.size(); i++) {
+
+
+    		if(nodes.get(i).getId().equals(id)) {
+    			
+    			 nodes.remove(i);
+    			 
+    			 return true;
+    		}
+    		
+    	}
+    	
+    	return false;
+    	
+    }
+    
+    private void borrarVecindad(String id) {
     	
     	for(int i = 0; i < edges.size(); i++) {
     		
-    		if(edges.get(i).getStart().equals(e.getStart()) && edges.get(i).getEnd().equals(e.getEnd())) {
-    			edges.get(i).aumentarPeso(e.getWeight());
+    		System.out.println(id +" " + edges.get(i).getStart() +" " + edges.get(i).getEnd());
+    		
+    		if(edges.get(i).getStart().equals(id) || edges.get(i).getEnd().equals(id)) {
+    			
+    			edges.remove(i);
+    			i = -1;
+    			
+    		}
+    		
+    	}
+    	
+    	
+    }
+    
+    public boolean existeNodo(String id) {
+    	
+    	for(int i = 0; i < nodes.size(); i++) {
+    		
+    		if(nodes.get(i).getId().equals(id)) {
     			return true;
     		}
     		
     	}
-    	edges.add(e);
     	return false;
+    }
+    
+    public boolean agregarEdge(Edge e) {
+    	
+    	if(existeNodo(e.getStart()) && existeNodo(e.getEnd())) {
+    		
+    		agregarVecindad(e.getStart(), e.getEnd(), e.getWeight());
+
+        	
+        	for(int i = 0; i < edges.size(); i++) {
+        		
+        		if(edges.get(i).getStart().equals(e.getStart()) && edges.get(i).getEnd().equals(e.getEnd())) {
+        			edges.get(i).aumentarPeso(e.getWeight());
+        			return true;
+        		}
+        		
+        	}
+        	edges.add(e);
+        	return true;
+    		
+    	}
+    	
+    	return false;
+    	
+    	
     	
     }
     
@@ -41,18 +115,14 @@ public class Graph {
 			
 			System.out.println("Comprando: " + idStart +" con: " + nodes.get(i).getId());
 			
-			if(nodes.get(i).getId().equals(idStart) && peso < 999 && peso != 0) {
-				System.out.println("Coincidimos");
-				nodes.get(i).aumentarInDegree();
-				
-			}
-			if(nodes.get(i).getId().equals(idEnd) && peso < 999 && peso != 0) {
-				
+			if(nodes.get(i).getId().equals(idStart) && peso < 9999 && peso != 0) {
 				nodes.get(i).aumentarOutDegree();
-				
+			}
+			
+			if(nodes.get(i).getId().equals(idEnd) && peso < 9999) {
+				nodes.get(i).aumentarInDegree();
 			}
 		}
-		
 	}
     
     public Graph(String id) {

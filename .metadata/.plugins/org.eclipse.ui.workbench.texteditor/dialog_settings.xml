@@ -1,28 +1,50 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
-		<item key="selection" value=".agregarEdge"/>
+		<item key="selection" value="n7"/>
 		<item key="wrap" value="true"/>
 		<item key="casesensitive" value="false"/>
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
 		<list key="findhistory">
-			<item value=".getEdges().add"/>
-			<item value="n"/>
-			<item value="graph.agregarRuta("/>
-			<item value="g.getEdges().add(new Edge("/>
+			<item value="telefono7"/>
+			<item value="telefono6"/>
+			<item value="telefono5"/>
+			<item value="telefono4"/>
+			<item value="telefono3"/>
+			<item value="telefono2"/>
+			<item value="telefono1"/>
+			<item value="telefono0"/>
+			<item value="n7"/>
+			<item value="n6"/>
+			<item value="n5"/>
+			<item value="n4"/>
+			<item value="n3"/>
+			<item value="n2"/>
+			<item value="n1"/>
 		</list>
 		<list key="replacehistory">
-			<item value=".agregarEdge"/>
-			<item value="telefono"/>
-			<item value="g.getEdges().add(new Edge("/>
-			<item value="graph.agregarRuta("/>
+			<item value="n7"/>
+			<item value="n6"/>
+			<item value="n5"/>
+			<item value="n4"/>
+			<item value="n3"/>
+			<item value="n2"/>
+			<item value="n1"/>
+			<item value="n0"/>
+			<item value="telefono7"/>
+			<item value="telefono6"/>
+			<item value="telefono5"/>
+			<item value="telefono4"/>
+			<item value="telefono3"/>
+			<item value="telefono2"/>
+			<item value="telefono1"/>
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
-		<item key="DIALOG_X_ORIGIN" value="1016"/>
-		<item key="DIALOG_Y_ORIGIN" value="229"/>
+		<item key="DIALOG_X_ORIGIN" value="1316"/>
+		<item key="DIALOG_Y_ORIGIN" value="262"/>
 		<item key="DIALOG_WIDTH" value="336"/>
 		<item key="DIALOG_HEIGHT" value="454"/>
 		<item key="DIALOG_FONT_NAME" value="1|Segoe UI|9.0|0|WINDOWS|1|-15|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI"/>
